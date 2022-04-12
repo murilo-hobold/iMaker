@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/03/29 21:38:55.000.421,=C:\Users\muril\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/03/29 21:41:10.000.271,C:\Projetos\iMarker\frmPrincipal.pas=C:\Users\muril\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/03/29 21:41:10.000.271,C:\Projetos\iMarker\frmPrincipal.fmx=C:\Users\muril\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2022/03/29 21:45:20.000.783,C:\Projetos\iMarker\iMarker.dproj=C:\Users\muril\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/03/29 22:27:45.000.301,=C:\Projetos\iMarker\Unit1.pas</Transaction>
+    <Transaction>2022/03/29 22:28:07.000.899,C:\Projetos\iMarker\Unit1.fmx=C:\Projetos\iMarker\frmConfJogo.fmx</Transaction>
+    <Transaction>2022/03/29 22:28:07.000.899,C:\Projetos\iMarker\Unit1.pas=C:\Projetos\iMarker\frmConfJogo.pas</Transaction>
+    <Transaction>2022/03/29 22:45:37.000.895,C:\Projetos\iMarker\frmConfJogo.pas=</Transaction>
+    <Transaction>2022/03/29 22:46:02.000.239,=C:\Projetos\iMarker\Unit1.pas</Transaction>
+    <Transaction>2022/03/29 22:47:05.000.112,C:\Projetos\iMarker\Unit1.pas=C:\Projetos\iMarker\Modelos\frmModelo1.pas</Transaction>
+    <Transaction>2022/03/29 22:47:05.000.112,C:\Projetos\iMarker\Unit1.fmx=C:\Projetos\iMarker\Modelos\frmModelo1.fmx</Transaction>
+    <Transaction>2022/03/29 22:47:36.000.206,=C:\Projetos\iMarker\Unit2.pas</Transaction>
+    <Transaction>2022/03/29 22:48:01.000.705,C:\Projetos\iMarker\Unit2.fmx=C:\Projetos\iMarker\frmConfJogo.fmx</Transaction>
+    <Transaction>2022/03/29 22:48:01.000.705,C:\Projetos\iMarker\Unit2.pas=C:\Projetos\iMarker\frmConfJogo.pas</Transaction>
+    <Transaction>2022/03/29 22:48:12.000.969,=C:\Projetos\iMarker\Unit2.pas</Transaction>
+    <Transaction>2022/03/29 22:48:37.000.153,C:\Projetos\iMarker\Unit2.pas=C:\Projetos\iMarker\frmJogo.pas</Transaction>
+    <Transaction>2022/03/29 22:48:37.000.153,C:\Projetos\iMarker\Unit2.fmx=C:\Projetos\iMarker\frmJogo.fmx</Transaction>
+    <Transaction>2022/03/30 21:50:43.000.743,=C:\Projetos\iMarker\udm.pas</Transaction>
+    <Transaction>2022/04/04 21:02:05.000.024,C:\Projetos\iMarker\frmConfJogo.fmx=C:\Projetos\iMarker\frmConfJogo2.fmx</Transaction>
+    <Transaction>2022/04/04 21:02:05.000.024,C:\Projetos\iMarker\frmConfJogo.pas=C:\Projetos\iMarker\frmConfJogo2.pas</Transaction>
+    <Transaction>2022/04/04 21:02:08.000.670,C:\Projetos\iMarker\frmConfJogo2.pas=</Transaction>
+    <Transaction>2022/04/04 21:02:18.000.113,=C:\Projetos\iMarker\Unit2.pas</Transaction>
+    <Transaction>2022/04/04 21:02:54.000.729,C:\Projetos\iMarker\Unit2.pas=C:\Projetos\iMarker\frmConfJogo.pas</Transaction>
+    <Transaction>2022/04/04 21:02:54.000.729,C:\Projetos\iMarker\Unit2.fmx=C:\Projetos\iMarker\frmConfJogo.fmx</Transaction>
+    <Transaction>2022/04/04 21:06:31.000.302,C:\Projetos\iMarker\frmConfJogo.pas=</Transaction>
+    <Transaction>2022/04/04 21:06:50.000.826,=C:\Projetos\iMarker\frmConfJogo.pas</Transaction>
+    <Transaction>2022/04/04 21:08:18.000.833,C:\Projetos\iMarker\frmConfJogo.pas=</Transaction>
+    <Transaction>2022/04/04 21:09:31.000.405,C:\Projetos\iMarker\frmJogo.fmx=C:\Projetos\iMarker\frmConfJogo.fmx</Transaction>
+    <Transaction>2022/04/04 21:09:31.000.405,C:\Projetos\iMarker\frmJogo.pas=C:\Projetos\iMarker\frmConfJogo.pas</Transaction>
+    <Transaction>2022/04/04 23:51:36.000.454,=C:\Projetos\iMarker\uFuncoes.pas</Transaction>
+    <Transaction>2022/04/05 00:10:20.000.842,=C:\Projetos\iMarker\Frames\frPlacar.pas</Transaction>
+    <Transaction>2022/04/05 00:21:38.000.554,C:\Projetos\iMarker\Frames\frPlacar.pas=C:\Projetos\iMarker\Frames\frPlacar2.pas</Transaction>
+    <Transaction>2022/04/05 00:21:38.000.554,C:\Projetos\iMarker\Frames\frPlacar.fmx=C:\Projetos\iMarker\Frames\frPlacar2.fmx</Transaction>
+    <Transaction>2022/04/05 00:21:50.000.745,=C:\Projetos\iMarker\Frames\frPlacar.pas</Transaction>
+    <Transaction>2022/04/07 21:52:33.000.615,=C:\Projetos\iMarker\Unit2.pas</Transaction>
+    <Transaction>2022/04/07 21:52:46.000.073,C:\Projetos\iMarker\frmJogadores.fmx=C:\Projetos\iMarker\Unit2.fmx</Transaction>
+    <Transaction>2022/04/07 21:52:46.000.073,C:\Projetos\iMarker\frmJogadores.pas=C:\Projetos\iMarker\Unit2.pas</Transaction>
+    <Transaction>2022/04/07 23:01:20.000.254,=C:\Projetos\iMarker\Unit1.pas</Transaction>
+    <Transaction>2022/04/07 23:01:32.000.798,C:\Projetos\iMarker\Frames\frJogadores.pas=C:\Projetos\iMarker\Unit1.pas</Transaction>
+    <Transaction>2022/04/07 23:01:32.000.798,C:\Projetos\iMarker\Frames\frJogadores.fmx=C:\Projetos\iMarker\Unit1.fmx</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android="0055784055"/>
+	</ActiveMobileDevice>
+</BorlandProject>

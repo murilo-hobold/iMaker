@@ -1,0 +1,12 @@
+﻿[FormConfJogo.FDMemQtJogador]
+Visible=False
+
+[FormConfJogo.FDQryPadJogo]
+Visible=False
+
+[FormJogo.FDQryJogo]
+Visible=False
+
+[FormJogo.FDQryRodada]
+Visible=False
+

@@ -1,0 +1,115 @@
+object FormModelo1: TFormModelo1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 665
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object LayoutPrincipal: TLayout
+    Align = Client
+    Padding.Left = 8.000000000000000000
+    Padding.Top = 16.000000000000000000
+    Padding.Right = 8.000000000000000000
+    Padding.Bottom = 16.000000000000000000
+    Size.Width = 665.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object LayoutModelo: TLayout
+      Align = Client
+      Size.Width = 649.000000000000000000
+      Size.Height = 448.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+    object rectFundoPreto: TRectangle
+      Align = Contents
+      Fill.Color = xFF0F0F0F
+      Locked = True
+      Opacity = 0.400000005960464500
+      Size.Width = 665.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      Visible = False
+    end
+    object rectPopupMenu: TRectangle
+      Fill.Color = claWhite
+      Locked = True
+      Position.X = 50.000000000000000000
+      Position.Y = 100.000000000000000000
+      Size.Width = 370.000000000000000000
+      Size.Height = 280.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      object LayPopUpMenu: TLayout
+        Align = Client
+        Margins.Left = 4.000000000000000000
+        Margins.Top = 4.000000000000000000
+        Margins.Right = 4.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Size.Width = 362.000000000000000000
+        Size.Height = 239.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+      object RectPopUpTitulo: TRectangle
+        Align = Top
+        Fill.Color = xFFC79D33
+        Size.Width = 370.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Thickness = 2.000000000000000000
+        XRadius = 10.000000000000000000
+        YRadius = 10.000000000000000000
+        object LabPopUpTitulo: TLabel
+          Align = Client
+          StyledSettings = [Family]
+          Margins.Left = 33.000000000000000000
+          Size.Width = 304.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.HorzAlign = Center
+          Text = 'Menu PopUp'
+          TabOrder = 0
+        end
+        object RectPopUpHide: TRectangle
+          Align = Right
+          Fill.Color = claBlack
+          Position.X = 337.000000000000000000
+          Size.Width = 33.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          XRadius = 10.000000000000000000
+          YRadius = 10.000000000000000000
+          OnClick = RectPopUpHideClick
+          object LabPopUpMenuHide: TLabel
+            Align = Client
+            StyledSettings = [Family, Size]
+            Locked = True
+            Size.Width = 33.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claWhite
+            TextSettings.HorzAlign = Center
+            Text = 'X'
+            TabOrder = 0
+          end
+        end
+      end
+    end
+  end
+  object actList: TActionList
+    Left = 14
+    Top = 8
+  end
+end

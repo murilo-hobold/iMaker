@@ -1,0 +1,393 @@
+inherited FormJogo: TFormJogo
+  Caption = 'FormModelo2'
+  DesignerMasterStyle = 0
+  inherited LayoutPrincipal: TLayout
+    inherited LayoutModelo: TLayout
+      Size.Height = 406.000000000000000000
+      TabOrder = 2
+    end
+    inherited rectPopupMenu: TRectangle
+      inherited RectPopUpTitulo: TRectangle
+        inherited LabPopUpTitulo: TLabel
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited RectPopUpHide: TRectangle
+          inherited LabPopUpMenuHide: TLabel
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+          end
+        end
+      end
+    end
+    object lbPlacar: TListBox
+      Align = Client
+      Size.Width = 649.000000000000000000
+      Size.Height = 406.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'transparentlistboxstyle'
+      TabOrder = 0
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 649.000000000000000000
+      Viewport.Height = 406.000000000000000000
+    end
+    object LayoutRodada: TLayout
+      Align = Top
+      Position.X = 8.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 649.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object lbSetEquipes: TListBox
+        Align = Client
+        Size.Width = 569.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'transparentlistboxstyle'
+        TabOrder = 0
+        Columns = 2
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 569.000000000000000000
+        Viewport.Height = 42.000000000000000000
+        object lbi10Equipe1: TListBoxItem
+          Selectable = False
+          Size.Width = 284.000000000000000000
+          Size.Height = 42.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object RectangleEquipe1: TRectangle
+            Align = Client
+            Fill.Color = claWhite
+            Padding.Left = 2.000000000000000000
+            Padding.Top = 2.000000000000000000
+            Padding.Right = 2.000000000000000000
+            Padding.Bottom = 2.000000000000000000
+            Margins.Left = 4.000000000000000000
+            Margins.Top = 1.000000000000000000
+            Margins.Right = 4.000000000000000000
+            Margins.Bottom = 1.000000000000000000
+            Size.Width = 276.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Thickness = 2.000000000000000000
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            object edtPlacar1: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              StyleLookup = 'transparentedit'
+              TabOrder = 0
+              KeyboardType = NumberPad
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.HorzAlign = Center
+              Size.Width = 272.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              TextPrompt = 'Pontua'#231#227'o Eq. 1'
+              StyledSettings = [Family, Style, FontColor]
+            end
+          end
+        end
+        object lbi20Equipe2: TListBoxItem
+          Selectable = False
+          Position.X = 284.000000000000000000
+          Size.Width = 284.000000000000000000
+          Size.Height = 42.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object RectangleEquipe2: TRectangle
+            Align = Client
+            Fill.Color = claWhite
+            Padding.Left = 2.000000000000000000
+            Padding.Top = 2.000000000000000000
+            Padding.Right = 2.000000000000000000
+            Padding.Bottom = 2.000000000000000000
+            Margins.Left = 4.000000000000000000
+            Margins.Top = 1.000000000000000000
+            Margins.Right = 4.000000000000000000
+            Margins.Bottom = 1.000000000000000000
+            Size.Width = 276.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Thickness = 2.000000000000000000
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            object edtPlacar2: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              StyleLookup = 'transparentedit'
+              TabOrder = 0
+              KeyboardType = NumberPad
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.HorzAlign = Center
+              Size.Width = 272.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              TextPrompt = 'Pontua'#231#227'o Eq. 2'
+              StyledSettings = [Family, Style, FontColor]
+            end
+          end
+        end
+        object lbi30Equipe3: TListBoxItem
+          Selectable = False
+          Position.Y = 42.000000000000000000
+          Size.Width = 215.000000000000000000
+          Size.Height = 42.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Visible = False
+          object RectangleEquipe3: TRectangle
+            Align = Client
+            Fill.Color = claWhite
+            Padding.Left = 2.000000000000000000
+            Padding.Top = 2.000000000000000000
+            Padding.Right = 2.000000000000000000
+            Padding.Bottom = 2.000000000000000000
+            Margins.Left = 4.000000000000000000
+            Margins.Top = 1.000000000000000000
+            Margins.Right = 4.000000000000000000
+            Margins.Bottom = 1.000000000000000000
+            Size.Width = 207.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Thickness = 2.000000000000000000
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            object edtPlacar3: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              StyleLookup = 'transparentedit'
+              TabOrder = 0
+              KeyboardType = NumberPad
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.HorzAlign = Center
+              Size.Width = 203.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              TextPrompt = 'Pontua'#231#227'o Eq. 3'
+              StyledSettings = [Family, Style, FontColor]
+            end
+          end
+        end
+      end
+      object RectangleProxRodada: TRectangle
+        Align = Left
+        Fill.Color = claWhite
+        Padding.Left = 2.000000000000000000
+        Padding.Top = 2.000000000000000000
+        Padding.Right = 2.000000000000000000
+        Padding.Bottom = 2.000000000000000000
+        Margins.Top = 1.000000000000000000
+        Margins.Bottom = 1.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Thickness = 2.000000000000000000
+        XRadius = 10.000000000000000000
+        YRadius = 10.000000000000000000
+        object labProxRodada: TLabel
+          Align = Client
+          StyledSettings = [Family, FontColor]
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.HorzAlign = Center
+          Text = '1'
+          TabOrder = 0
+        end
+      end
+      object RectangleAdd: TRectangle
+        Align = Right
+        Fill.Color = claWhite
+        Padding.Left = 2.000000000000000000
+        Padding.Top = 2.000000000000000000
+        Padding.Right = 2.000000000000000000
+        Padding.Bottom = 2.000000000000000000
+        Margins.Top = 1.000000000000000000
+        Margins.Bottom = 1.000000000000000000
+        Position.X = 609.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Thickness = 2.000000000000000000
+        XRadius = 10.000000000000000000
+        YRadius = 10.000000000000000000
+        object btnAddRodada: TSpeedButton
+          Align = Client
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'addtoolbutton'
+          Text = 'btnAddRodada'
+          OnClick = btnAddRodadaClick
+        end
+      end
+    end
+  end
+  object FDQryJogo: TFDQuery
+    CachedUpdates = True
+    Connection = dm.FDConCtrl
+    SQL.Strings = (
+      'SELECT jogo.* '
+      '  FROM jogo'
+      ' WHERE jogo.jog_id = :jog_id')
+    Left = 32
+    Top = 288
+    ParamData = <
+      item
+        Name = 'JOG_ID'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end>
+    object FDQryJogojog_id: TIntegerField
+      FieldName = 'jog_id'
+      Origin = 'jog_id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDQryJogojog_qtplayer: TIntegerField
+      FieldName = 'jog_qtplayer'
+      Origin = 'jog_qtplayer'
+    end
+    object FDQryJogojog_equipe1: TWideMemoField
+      FieldName = 'jog_equipe1'
+      Origin = 'jog_equipe1'
+      BlobType = ftWideMemo
+    end
+    object FDQryJogojog_equipe2: TWideMemoField
+      FieldName = 'jog_equipe2'
+      Origin = 'jog_equipe2'
+      BlobType = ftWideMemo
+    end
+    object FDQryJogojog_equipe3: TWideMemoField
+      FieldName = 'jog_equipe3'
+      Origin = 'jog_equipe3'
+      BlobType = ftWideMemo
+    end
+    object FDQryJogojog_player1: TWideMemoField
+      FieldName = 'jog_player1'
+      Origin = 'jog_player1'
+      BlobType = ftWideMemo
+    end
+    object FDQryJogojog_player2: TWideMemoField
+      FieldName = 'jog_player2'
+      Origin = 'jog_player2'
+      BlobType = ftWideMemo
+    end
+    object FDQryJogojog_player3: TWideMemoField
+      FieldName = 'jog_player3'
+      Origin = 'jog_player3'
+      BlobType = ftWideMemo
+    end
+    object FDQryJogojog_player4: TWideMemoField
+      FieldName = 'jog_player4'
+      Origin = 'jog_player4'
+      BlobType = ftWideMemo
+    end
+    object FDQryJogojog_player5: TWideMemoField
+      FieldName = 'jog_player5'
+      Origin = 'jog_player5'
+      BlobType = ftWideMemo
+    end
+    object FDQryJogojog_player6: TWideMemoField
+      FieldName = 'jog_player6'
+      Origin = 'jog_player6'
+      BlobType = ftWideMemo
+    end
+  end
+  object BindSrcDBJogo: TBindSourceDB
+    DataSet = FDQryJogo
+    ScopeMappings = <>
+    Left = 32
+    Top = 336
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 36
+    Top = 389
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSrcDBRodada
+      FieldName = 'rod_ponteq1'
+      Control = edtPlacar1
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSrcDBRodada
+      FieldName = 'rod_ponteq2'
+      Control = edtPlacar2
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSrcDBRodada
+      FieldName = 'rod_ponteq3'
+      Control = edtPlacar3
+      Track = False
+    end
+    object LinkPropertyToFieldText: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSrcDBRodada
+      FieldName = 'rod_id'
+      Component = labProxRodada
+      ComponentProperty = 'Text'
+    end
+  end
+  object FDQryRodada: TFDQuery
+    CachedUpdates = True
+    Connection = dm.FDConCtrl
+    SQL.Strings = (
+      'SELECT rodada.* '
+      '  FROM rodada'
+      ' WHERE rodada.jog_id = :jog_id'
+      ' ORDER BY rodada.rod_id desc')
+    Left = 104
+    Top = 288
+    ParamData = <
+      item
+        Name = 'JOG_ID'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end>
+    object FDQryRodadajog_id: TIntegerField
+      FieldName = 'jog_id'
+      Origin = 'jog_id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDQryRodadarod_id: TIntegerField
+      FieldName = 'rod_id'
+      Origin = 'rod_id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDQryRodadarod_ponteq1: TFloatField
+      FieldName = 'rod_ponteq1'
+      Origin = 'rod_ponteq1'
+    end
+    object FDQryRodadarod_ponteq2: TFloatField
+      FieldName = 'rod_ponteq2'
+      Origin = 'rod_ponteq2'
+    end
+    object FDQryRodadarod_ponteq3: TFloatField
+      FieldName = 'rod_ponteq3'
+      Origin = 'rod_ponteq3'
+    end
+  end
+  object BindSrcDBRodada: TBindSourceDB
+    DataSet = FDQryRodada
+    ScopeMappings = <>
+    Left = 112
+    Top = 344
+  end
+end
