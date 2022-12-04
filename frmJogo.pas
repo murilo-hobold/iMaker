@@ -4,8 +4,8 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
-  frmModelo1, FMX.Controls.Presentation,
+  System.StrUtils, System.UIConsts, FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs,
+  FMX.StdCtrls, frmModelo1, FMX.Controls.Presentation,
   FMX.Layouts, FMX.Edit, FMX.Objects, FMX.ListBox, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.StorageBin, Data.DB,
@@ -15,6 +15,10 @@ uses
   Data.Bind.DBScope, Router4D, Router4D.Interfaces, Router4D.Props;
 
 type
+    TExecutaClickWin = procedure(Sender: TObject) of Object;
+    TExecutaClickMobile = procedure(Sender: TObject; const Point: TPointF)
+      of Object;
+
   TFormJogo = class(TFormModelo1, iRouter4DComponent)
     FDQryJogo: TFDQuery;
     FDQryJogojog_id: TIntegerField;
@@ -31,14 +35,13 @@ type
     BindSrcDBJogo: TBindSourceDB;
     BindingsList1: TBindingsList;
     lbPlacar: TListBox;
-    LayoutRodada: TLayout;
-    lbSetEquipes: TListBox;
-    lbi10Equipe1: TListBoxItem;
-    RectangleEquipe1: TRectangle;
-    lbi20Equipe2: TListBoxItem;
-    RectangleEquipe2: TRectangle;
-    lbi30Equipe3: TListBoxItem;
-    RectangleEquipe3: TRectangle;
+    lbSetPontuacao: TListBox;
+    lbi10PontEq1: TListBoxItem;
+    RectanglePlacar1: TRectangle;
+    lbi20PontEq2: TListBoxItem;
+    RectanglePlacar2: TRectangle;
+    lbi30PontEq3: TListBoxItem;
+    RectanglePlacar3: TRectangle;
     edtPlacar1: TEdit;
     edtPlacar2: TEdit;
     edtPlacar3: TEdit;
@@ -50,23 +53,53 @@ type
     FDQryRodadarod_ponteq3: TFloatField;
     labProxRodada: TLabel;
     RectangleProxRodada: TRectangle;
-    RectangleAdd: TRectangle;
-    btnAddRodada: TSpeedButton;
     BindSrcDBRodada: TBindSourceDB;
     LinkControlToField1: TLinkControlToField;
     LinkControlToField2: TLinkControlToField;
     LinkControlToField3: TLinkControlToField;
     LinkPropertyToFieldText: TLinkPropertyToField;
-    procedure btnAddRodadaClick(Sender: TObject);
+    imgAddRodada: TImage;
+    Layout20Rodada: TLayout;
+    actAddRodada: TAction;
+    Layout10Equipes: TLayout;
+    lbSetEquipes: TListBox;
+    lbi10Equipe1: TListBoxItem;
+    RectangleEquipe1: TRectangle;
+    LabEquipe1: TLabel;
+    lbi20Equipe2: TListBoxItem;
+    RectangleEquipe2: TRectangle;
+    LabEquipe2: TLabel;
+    lbi30Equipe3: TListBoxItem;
+    RectangleEquipe3: TRectangle;
+    LabEquipe3: TLabel;
+    Layout30Deler: TLayout;
+    Layout40Gravar: TLayout;
+    RoundRectNovo: TRoundRect;
+    btnNovoJogador: TSpeedButton;
+    RectangleDealer: TRectangle;
+    labDealer: TLabel;
+    RectangleNomeDealer: TRectangle;
+    cbbDealer: TComboBox;
+    BindSrcDBDealer: TBindSourceDB;
+    LinkFillControlToField1: TLinkFillControlToField;
+    FDQryRodadarod_data: TDateField;
+    FDQryRodadarod_dealer: TWideMemoField;
+    procedure actAddRodadaExecute(Sender: TObject);
   private
-
+{$IFDEF MSWINDOWS}
+    procedure p_OnClickAddPontuacao(Sender: TObject);
+{$ELSE}
+    procedure p_OnClickAddPontuacao(Sender: TObject; const Point: TPointF);
+{$ENDIF}
     procedure p_AtualizarJogo(pJogoId: Integer);
     procedure p_add_lb_Placar(pQtPlayer: Integer; pEquipe1, pEquipe2,
       pEquipe3: String);
     procedure p_setEqRodada(pQtPlayer: Integer);
     procedure p_add_lb_Placar2(pQtPlayer, pRodada: Integer; pEquipe1, pEquipe2,
-      pEquipe3: String);
+      pEquipe3, p_Dealer: String);
     procedure p_add_lb_PlacarTotal(pQtPlayer: Integer; pEquipe1, pEquipe2,
+      pEquipe3: String);
+    procedure p_setEqMenuPopUp(pQtPlayer: Integer; pEquipe1, pEquipe2,
       pEquipe3: String);
     { Private declarations }
   public
@@ -137,6 +170,12 @@ begin
 
         p_setEqRodada(FDQryJogojog_qtplayer.Value);
 
+        with dm.FDQryDealer do begin
+            Close;
+            ParamByName('jog_id').Value := pJogoId;
+            Open;
+        end;
+
         p_add_lb_Placar(FDQryJogojog_qtplayer.Value,
                         FDQryJogojog_equipe1.Value,
                         FDQryJogojog_equipe2.Value,
@@ -172,7 +211,8 @@ begin
                              FDQryRodadarod_id.Value,
                              FDQryRodadarod_ponteq1.AsString,
                              FDQryRodadarod_ponteq2.AsString,
-                             FDQryRodadarod_ponteq3.AsString);
+                             FDQryRodadarod_ponteq3.AsString,
+                             FDQryRodadarod_dealer.AsString);
 
             FDQryRodada.Next;
         end;
@@ -189,6 +229,11 @@ procedure TFormJogo.p_add_lb_Placar(pQtPlayer :Integer; pEquipe1, pEquipe2, pEqu
 var
     vItem: TListBoxItem;
     vFrame: TFramePLacar;
+{$IFDEF MSWINDOWS}
+    vCall: TExecutaClickWin;
+{$ELSE}
+    vCall: TExecutaClickMobile;
+{$ENDIF}
 begin
     vItem := TListBoxItem.Create(lbPlacar);
     vItem.Parent := lbPlacar;
@@ -226,9 +271,60 @@ begin
         end;
     end;
 
+    vFrame.RectangleRight.Visible := True;
+    vFrame.ImgRight.Bitmap        := imgAddRodada.Bitmap;
+
+    p_setEqMenuPopUp(pQtPlayer, pEquipe1, pEquipe2, pEquipe3);
+
+    vCall := p_OnClickAddPontuacao;
+{$IFDEF MSWINDOWS}
+    vframe.ImgRight.OnClick := vCall;
+{$ELSE}
+    vframe.ImgRight.OnTap   := vCall;
+{$ENDIF}
+
     vItem.AddObject(vFrame);
 
     lbPlacar.AddObject(vItem);
+end;
+
+{$IFDEF MSWINDOWS}
+procedure TFormJogo.p_OnClickAddPontuacao(Sender: TObject);
+{$ELSE}
+procedure TFormJogo.p_OnClickAddPontuacao(Sender: TObject; const Point: TPointF);
+{$ENDIF}
+begin
+    p_PopUpMenuShow('Rodada', 4);
+end;
+
+procedure TFormJogo.p_setEqMenuPopUp(pQtPlayer :Integer; pEquipe1, pEquipe2, pEquipe3 :String);
+begin
+    lbi10Equipe1.Visible  := False;
+    lbi20Equipe2.Visible  := False;
+    lbi30Equipe3.Visible  := False;
+    lbSetEquipes.Columns  := f_GetQtdEquipes(pQtPlayer);
+
+    Case f_GetQtdEquipes(pQtPlayer) of
+        2 : //-->> 2 Jogadores
+        begin
+            lbi10Equipe1.Visible   := True;
+            LabEquipe1.text        := pEquipe1;
+
+            lbi20Equipe2.Visible   := True;
+            LabEquipe2.text        := pEquipe2;
+        end;
+        3 : //-->> 3 Jogadores
+        begin
+            lbi10Equipe1.Visible   := True;
+            LabEquipe1.text        := pEquipe1;
+
+            lbi20Equipe2.Visible   := True;
+            LabEquipe2.text        := pEquipe2;
+
+            lbi30Equipe3.Visible   := True;
+            LabEquipe3.text        := pEquipe3;
+        end;
+    end;
 end;
 
 procedure TFormJogo.p_add_lb_PlacarTotal(pQtPlayer :Integer; pEquipe1, pEquipe2, pEquipe3 :String);
@@ -277,21 +373,28 @@ begin
     lbPlacar.AddObject(vItem);
 end;
 
-procedure TFormJogo.p_add_lb_Placar2(pQtPlayer, pRodada :Integer; pEquipe1, pEquipe2, pEquipe3 :String);
+procedure TFormJogo.p_add_lb_Placar2(pQtPlayer, pRodada :Integer; pEquipe1, pEquipe2, pEquipe3, p_Dealer :String);
+const
+    cGold1 = 'Gold';
+    cGold2 = '#FFC79D33';
 var
     vItem: TListBoxItem;
     vFrame: TFramePLacar2;
+    vCor :String;
 begin
+    vCor := IfThen(((pRodada mod 2) = 0), cGold1, cGold2);
+
     vItem := TListBoxItem.Create(lbPlacar);
     vItem.Parent := lbPlacar;
     vItem.Selectable := False;
     vItem.Text       := '';
-    vItem.Height     := 42;
+    vItem.Height     := 36;
 
     vFrame := TFramePLacar2.Create(vItem);
     vFrame.Align                 := TAlignLayout.Client;
     vFrame.Parent                := vItem;
-    vFrame.labRodada.text        := IntToStr(pRodada);
+    vFrame.labRodada.Text        := IntToStr(pRodada);
+    vFrame.labDealer.Text        := p_Dealer;
     vFrame.lbi10Equipe1.Visible  := False;
     vFrame.lbi20Equipe2.Visible  := False;
     vFrame.lbi30Equipe3.Visible  := False;
@@ -318,6 +421,13 @@ begin
             vFrame.LabEquipe3.text        := pEquipe3;
         end;
     end;
+
+    //-->> Define as cores do Frame
+    vFrame.RectangleRodada.fill.Color  := StringToAlphaColor(vCor);
+    vFrame.RectangleDealer.fill.Color  := StringToAlphaColor(vCor);
+    vFrame.RectangleEquipe1.Fill.Color := StringToAlphaColor(vCor);
+    vFrame.RectangleEquipe2.Fill.Color := StringToAlphaColor(vCor);
+    vFrame.RectangleEquipe3.Fill.Color := StringToAlphaColor(vCor);
 
     vItem.AddObject(vFrame);
 
@@ -347,7 +457,7 @@ begin
     end;
 end;
 
-procedure TFormJogo.btnAddRodadaClick(Sender: TObject);
+procedure TFormJogo.actAddRodadaExecute(Sender: TObject);
 begin
     inherited;
     if trim(edtPlacar1.Text) = NullAsStringValue then begin
@@ -377,6 +487,8 @@ begin
         dm.FDConCtrl.Commit;
 
         p_AtualizarJogo(FDQryRodadajog_id.Value);
+
+        p_PopUpMenuHide;
     except
         on E: Exception do
         begin

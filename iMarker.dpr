@@ -11,7 +11,8 @@ uses
   frPlacar in 'Frames\frPlacar.pas' {FramePlacar: TFrame},
   frPlacar2 in 'Frames\frPlacar2.pas' {FramePlacar2: TFrame},
   frmJogadores in 'frmJogadores.pas' {FormJogadores},
-  frJogadores in 'Frames\frJogadores.pas' {FrameJogadores: TFrame};
+  frJogadores in 'Frames\frJogadores.pas' {FrameJogadores: TFrame},
+  frmJogo in 'frmJogo.pas' {FormJogo};
 
 {$R *.res}
 

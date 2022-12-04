@@ -9,7 +9,6 @@ uses
 
 type
   TFramePlacar2 = class(TFrame)
-    ImgCarta2: TImage;
     lbSetEquipes: TListBox;
     lbi10Equipe1: TListBoxItem;
     RectangleEquipe1: TRectangle;
@@ -22,6 +21,8 @@ type
     LabEquipe3: TLabel;
     RectangleRodada: TRectangle;
     labRodada: TLabel;
+    RectangleDealer: TRectangle;
+    labDealer: TLabel;
   private
     { Private declarations }
   public

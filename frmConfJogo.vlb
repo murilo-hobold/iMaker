@@ -132,7 +132,7 @@ Coordinates=581,10,103,33
 Visible=False
 
 []
-Coordinates=206,10,76,51
+Coordinates=1427,10,99,51
 Visible=True
 
 [BindSrcDBQtJogador]
@@ -173,9 +173,6 @@ Coordinates=10,1385,93,33
 
 [FDQryJogojog_id]
 Coordinates=428,296,100,33
-
-[labQtdJogadores]
-Coordinates=1427,10,99,51
 
 [FDQryPadJogojog_id]
 Coordinates=428,351,119,33

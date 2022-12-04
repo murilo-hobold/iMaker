@@ -39,7 +39,7 @@ inherited FormConfJogo: TFormConfJogo
       object lbiPadJogo30: TListBoxItem
         Selectable = False
         Size.Width = 502.000000000000000000
-        Size.Height = 80.000000000000000000
+        Size.Height = 46.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object Rectangle1: TRectangle
@@ -50,7 +50,7 @@ inherited FormConfJogo: TFormConfJogo
           Margins.Right = 4.000000000000000000
           Margins.Bottom = 1.000000000000000000
           Size.Width = 494.000000000000000000
-          Size.Height = 78.000000000000000000
+          Size.Height = 44.000000000000000000
           Size.PlatformDefault = False
           Stroke.Thickness = 2.000000000000000000
           XRadius = 10.000000000000000000
@@ -67,27 +67,16 @@ inherited FormConfJogo: TFormConfJogo
             Margins.Right = 30.000000000000000000
             Margins.Bottom = 4.000000000000000000
             Size.Width = 434.000000000000000000
-            Size.Height = 40.000000000000000000
+            Size.Height = 36.000000000000000000
             Size.PlatformDefault = False
             StyleLookup = 'comboboxstyle'
-            TabOrder = 40
-          end
-          object labQtdJogadores: TLabel
-            Align = Top
-            StyledSettings = [Family]
-            Size.Width = 494.000000000000000000
-            Size.Height = 30.000000000000000000
-            Size.PlatformDefault = False
-            TextSettings.Font.Size = 22.000000000000000000
-            TextSettings.HorzAlign = Center
-            Text = 'Quantidade Jogadores'
-            TabOrder = 0
+            TabOrder = 39
           end
         end
       end
       object lbiPadJogo35: TListBoxItem
         Selectable = False
-        Position.Y = 80.000000000000000000
+        Position.Y = 46.000000000000000000
         Size.Width = 502.000000000000000000
         Size.Height = 46.000000000000000000
         Size.PlatformDefault = False
@@ -245,7 +234,7 @@ inherited FormConfJogo: TFormConfJogo
       end
       object lbiPadJogo40: TListBoxItem
         Selectable = False
-        Position.Y = 126.000000000000000000
+        Position.Y = 92.000000000000000000
         Size.Width = 502.000000000000000000
         Size.Height = 88.000000000000000000
         Size.PlatformDefault = False
@@ -498,7 +487,7 @@ inherited FormConfJogo: TFormConfJogo
       end
       object lbiPadJogo50: TListBoxItem
         Selectable = False
-        Position.Y = 214.000000000000000000
+        Position.Y = 180.000000000000000000
         Size.Width = 502.000000000000000000
         Size.Height = 44.000000000000000000
         Size.PlatformDefault = False

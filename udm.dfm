@@ -138,4 +138,37 @@ object dm: Tdm
       BlobType = ftWideMemo
     end
   end
+  object FDQryDealer: TFDQuery
+    CachedUpdates = True
+    Connection = FDConCtrl
+    SQL.Strings = (
+      'select   jogador.jgd_codigo, jogador.jgd_nome'
+      '    from jogador, jogo'
+      
+        '   where jogador.jgd_codigo in (jogo.jog_player1, jogo.jog_playe' +
+        'r2, jogo.jog_player3, jogo.jog_player4, jogo.jog_player5, jogo.j' +
+        'og_player6)'
+      '     and jogo.jog_id = :jog_id'
+      'order by jogador.jgd_codigo asc')
+    Left = 208
+    Top = 16
+    ParamData = <
+      item
+        Name = 'JOG_ID'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end>
+    object FDQryDealerjgd_codigo: TWideMemoField
+      FieldName = 'jgd_codigo'
+      Origin = 'jgd_codigo'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      BlobType = ftWideMemo
+    end
+    object FDQryDealerjgd_nome: TWideMemoField
+      FieldName = 'jgd_nome'
+      Origin = 'jgd_nome'
+      BlobType = ftWideMemo
+    end
+  end
 end

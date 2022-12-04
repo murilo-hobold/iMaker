@@ -2,27 +2,10 @@ object FramePlacar: TFramePlacar
   Size.Width = 702.000000000000000000
   Size.Height = 42.000000000000000000
   Size.PlatformDefault = False
-  object ImgCarta1: TImage
-    MultiResBitmap = <
-      item
-      end>
-    Align = Left
-    Size.Width = 40.000000000000000000
-    Size.Height = 42.000000000000000000
-    Size.PlatformDefault = False
-  end
-  object ImgCarta2: TImage
-    MultiResBitmap = <
-      item
-      end>
-    Align = Right
-    Position.X = 662.000000000000000000
-    Size.Width = 40.000000000000000000
-    Size.Height = 42.000000000000000000
-    Size.PlatformDefault = False
-  end
   object lbSetEquipes: TListBox
-    Align = Client
+    Align = Contents
+    Margins.Left = 40.000000000000000000
+    Margins.Right = 40.000000000000000000
     Size.Width = 622.000000000000000000
     Size.Height = 42.000000000000000000
     Size.PlatformDefault = False
@@ -66,7 +49,7 @@ object FramePlacar: TFramePlacar
           Size.PlatformDefault = False
           TextSettings.Font.Size = 16.000000000000000000
           TextSettings.Font.StyleExt = {00070000000000000004000000}
-          TextSettings.FontColor = xFFC79D33
+          TextSettings.FontColor = claGold
           TextSettings.HorzAlign = Center
           Text = 'Equipe 1'
           TabOrder = 0
@@ -105,7 +88,7 @@ object FramePlacar: TFramePlacar
           Size.PlatformDefault = False
           TextSettings.Font.Size = 16.000000000000000000
           TextSettings.Font.StyleExt = {00070000000000000004000000}
-          TextSettings.FontColor = xFFC79D33
+          TextSettings.FontColor = claGold
           TextSettings.HorzAlign = Center
           Text = 'Equipe 2'
           TabOrder = 0
@@ -145,12 +128,75 @@ object FramePlacar: TFramePlacar
           Size.PlatformDefault = False
           TextSettings.Font.Size = 16.000000000000000000
           TextSettings.Font.StyleExt = {00070000000000000004000000}
-          TextSettings.FontColor = xFFC79D33
+          TextSettings.FontColor = claGold
           TextSettings.HorzAlign = Center
           Text = 'Equipe 3'
           TabOrder = 0
         end
       end
+    end
+  end
+  object RectangleLeft: TRectangle
+    Align = Left
+    Fill.Color = claWhite
+    Padding.Left = 4.000000000000000000
+    Padding.Top = 4.000000000000000000
+    Padding.Right = 4.000000000000000000
+    Padding.Bottom = 4.000000000000000000
+    Margins.Top = 1.000000000000000000
+    Margins.Bottom = 1.000000000000000000
+    Position.Y = 1.000000000000000000
+    Size.Width = 40.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Thickness = 2.000000000000000000
+    Visible = False
+    XRadius = 10.000000000000000000
+    YRadius = 10.000000000000000000
+    object imgLeft: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Client
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 1.000000000000000000
+      Margins.Right = 1.000000000000000000
+      Margins.Bottom = 1.000000000000000000
+      Size.Width = 29.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object RectangleRight: TRectangle
+    Align = Right
+    Fill.Color = claWhite
+    Padding.Left = 4.000000000000000000
+    Padding.Top = 4.000000000000000000
+    Padding.Right = 4.000000000000000000
+    Padding.Bottom = 4.000000000000000000
+    Margins.Top = 1.000000000000000000
+    Margins.Bottom = 1.000000000000000000
+    Position.X = 662.000000000000000000
+    Position.Y = 1.000000000000000000
+    Size.Width = 40.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Thickness = 2.000000000000000000
+    Visible = False
+    XRadius = 10.000000000000000000
+    YRadius = 10.000000000000000000
+    object ImgRight: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Client
+      Margins.Left = 1.000000000000000000
+      Margins.Top = 1.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 1.000000000000000000
+      Size.Width = 29.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
     end
   end
 end

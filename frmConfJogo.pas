@@ -71,7 +71,6 @@ type
     LinkControlToField3: TLinkControlToField;
     LinkControlToField7: TLinkControlToField;
     Rectangle1: TRectangle;
-    labQtdJogadores: TLabel;
     lbBotoes: TListBox;
     lbiNovJogo: TListBoxItem;
     lbiVoltarAoJogo: TListBoxItem;
@@ -263,15 +262,9 @@ procedure TFormConfJogo.FDQryPadJogoNewRecord(DataSet: TDataSet);
 begin
   inherited;
     DataSet.FieldByName('pjg_qtplayer').Value := 4;
-    DataSet.FieldByName('pjg_equipe1').Value  := 'Equipe 1';
-    DataSet.FieldByName('pjg_equipe2').Value  := 'Equipe 2';
-    DataSet.FieldByName('pjg_equipe3').Value  := 'Equipe 3';
-    DataSet.FieldByName('pjg_player1').Value  := 'Jogador 1';
-    DataSet.FieldByName('pjg_player2').Value  := 'Jogador 2';
-    DataSet.FieldByName('pjg_player3').Value  := 'Jogador 3';
-    DataSet.FieldByName('pjg_player4').Value  := 'Jogador 4';
-    DataSet.FieldByName('pjg_player5').Value  := 'Jogador 5';
-    DataSet.FieldByName('pjg_player6').Value  := 'Jogador 6';
+    DataSet.FieldByName('pjg_equipe1').Value  := 'Lobos';
+    DataSet.FieldByName('pjg_equipe2').Value  := 'Ursos';
+    DataSet.FieldByName('pjg_equipe3').Value  := 'Leões';
     DataSet.FieldByName('jog_id').Value       := 0;
 end;
 

@@ -33,6 +33,9 @@ type
     FDQryJogador5jgd_nome: TWideMemoField;
     FDQryJogador6jgd_codigo: TWideMemoField;
     FDQryJogador6jgd_nome: TWideMemoField;
+    FDQryDealer: TFDQuery;
+    FDQryDealerjgd_codigo: TWideMemoField;
+    FDQryDealerjgd_nome: TWideMemoField;
     procedure FDConCtrlAfterConnect(Sender: TObject);
     procedure DataModuleCreate(Sender: TObject);
   private
@@ -118,6 +121,7 @@ begin
                       'rod_ponteq1  FLOAT,' +
                       'rod_ponteq2  FLOAT,' +
                       'rod_ponteq3  FLOAT,' +
+                      'rod_dealer   TEXT,' +
                       'rod_data     DATE DEFAULT (datetime('+QuotedStr('now') + ',' + QuotedStr('localtime') + ')), ' +
                       'primary key ( jog_id, rod_id))');
 end;

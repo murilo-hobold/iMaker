@@ -4,8 +4,8 @@
         <ProjectVersion>19.3</ProjectVersion>
         <FrameworkType>FMX</FrameworkType>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
-        <Platform Condition="'$(Platform)'==''">Android</Platform>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>33811</TargetedPlatforms>
         <AppType>Application</AppType>
         <MainSource>iMarker.dpr</MainSource>
@@ -41,6 +41,12 @@
     <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
         <Cfg_1>true</Cfg_1>
         <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Android' and '$(Cfg_1)'=='true') or '$(Cfg_1_Android)'!=''">
+        <Cfg_1_Android>true</Cfg_1_Android>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
@@ -197,6 +203,10 @@
         <DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
         <DCC_RangeChecking>true</DCC_RangeChecking>
     </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Android)'!=''">
+        <VerInfo_Build>1</VerInfo_Build>
+        <Android_NotificationAccentColor>#000000</Android_NotificationAccentColor>
+    </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
@@ -262,6 +272,10 @@
             <Form>FrameJogadores</Form>
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="frmJogo.pas">
+            <Form>FormJogo</Form>
+            <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -362,6 +376,12 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png" Configuration="Debug" Class="Android_SplashImage470">
+                    <Platform Name="Android">
+                        <RemoteName>splash_image.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_36x36.png" Configuration="Debug" Class="Android_LauncherIcon36">
                     <Platform Name="Android">
                         <RemoteName>ic_launcher.png</RemoteName>
@@ -383,12 +403,6 @@
                 <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_72x72.png" Configuration="Debug" Class="Android_NotificationIcon72">
                     <Platform Name="Android">
                         <RemoteName>ic_notification.png</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png" Configuration="Debug" Class="Android_SplashImage470">
-                    <Platform Name="Android">
-                        <RemoteName>splash_image.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -1263,8 +1277,8 @@
                 <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
-                <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>

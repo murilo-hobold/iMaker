@@ -6,7 +6,7 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes,
-  System.Variants,
+  System.Variants, FireDAC.Comp.Client,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.Objects, FMX.Layouts,
   FMX.ListBox, FMX.MultiView, Router4D, Router4D.Interfaces, Router4D.Props,
@@ -62,7 +62,7 @@ var
 implementation
 
 uses
-  frmConfJogo, frmJogo, frmJogadores;
+  frmConfJogo, frmJogo, frmJogadores, udm;
 
 {$R *.fmx}
 {
@@ -95,13 +95,33 @@ begin
 end;
 
 procedure TFormPrincipal.FormCreate(Sender: TObject);
+var
+    vqr :TFDQuery;
+    vAbJogador :Boolean;
 begin
+    vAbJogador := False;
+
+    try
+        vqr := dm.queryCtrl('SELECT COUNT(*) as vJogador FROM jogador ');
+        vqr.Open;
+        if vqr.RowsAffected > 0 then begin
+            vAbJogador := vqr.FieldByName('vJogador').Value = 0;
+        end;
+    finally
+        FreeAndNil(vqr);
+    end;
+
   mviewMenu.Width := 0;
   mviewMenu.NavigationPaneOptions.CollapsedWidth := 0;
+  mviewMenu.ShowMaster;
 
   RegisterRouters;
 
-  actConfJogoExecute(Sender);
+  if vAbJogador then begin
+      actJogadoresExecute(Sender);
+  end else begin
+      actConfJogoExecute(Sender);
+  end;
 end;
 
 procedure TFormPrincipal.ImgJogadoresClick(Sender: TObject);
