@@ -1,0 +1,110 @@
+object FrameRodada: TFrameRodada
+  Size.Width = 360.000000000000000000
+  Size.Height = 46.000000000000000000
+  Size.PlatformDefault = False
+  object RectFundo: TRectangle
+    Align = Client
+    Fill.Color = xFF171717
+    Margins.Bottom = 6.000000000000000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    XRadius = 10.000000000000000000
+    YRadius = 10.000000000000000000
+    object LabNumero: TLabel
+      Align = Left
+      StyledSettings = [Family]
+      Size.Width = 40.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = xFFF2C230
+      TextSettings.HorzAlign = Center
+      Text = '1'
+      HitTest = False
+    end
+    object LabDealer: TLabel
+      Align = Left
+      StyledSettings = [Family]
+      Position.X = 40.000000000000000000
+      Size.Width = 86.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = xFFA3A3A3
+      TextSettings.WordWrap = False
+      TextSettings.Trimming = Character
+      Text = 'Dealer'
+      HitTest = False
+    end
+    object PathEditar: TPath
+      Align = Right
+      Data.Data = 'M4 20 L8 19 L19 8 L16 5 L5 16 Z M14 7 L17 10'
+      Fill.Kind = None
+      HitTest = False
+      Margins.Left = 6.000000000000000000
+      Margins.Top = 12.000000000000000000
+      Margins.Right = 12.000000000000000000
+      Margins.Bottom = 12.000000000000000000
+      Position.X = 326.000000000000000000
+      Size.Width = 16.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF5A5A5A
+      Stroke.Thickness = 1.500000000000000000
+      Stroke.Cap = Round
+      Stroke.Join = Round
+      WrapMode = Fit
+    end
+    object LayoutPontos: TLayout
+      Align = Client
+      Size.Width = 194.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      OnResize = LayoutPontosResize
+      object LabPontos1: TLabel
+        Align = Left
+        StyledSettings = [Family]
+        Size.Width = 64.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Center
+        Text = '0'
+        HitTest = False
+      end
+      object LabPontos2: TLabel
+        Align = Left
+        StyledSettings = [Family]
+        Position.X = 64.000000000000000000
+        Size.Width = 64.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Center
+        Text = '0'
+        HitTest = False
+      end
+      object LabPontos3: TLabel
+        Align = Left
+        StyledSettings = [Family]
+        Position.X = 128.000000000000000000
+        Size.Width = 64.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Center
+        Text = '0'
+        HitTest = False
+      end
+    end
+  end
+end

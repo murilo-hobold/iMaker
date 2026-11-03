@@ -1,0 +1,98 @@
+object FormHistorico: TFormHistorico
+  Left = 0
+  Top = 0
+  Caption = 'Hist'#243'rico'
+  ClientHeight = 640
+  ClientWidth = 380
+  Fill.Color = xFF0B0B0B
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object LayoutPrincipal: TLayout
+    Align = Client
+    Size.Width = 380.000000000000000000
+    Size.Height = 640.000000000000000000
+    Size.PlatformDefault = False
+    object LayoutTopoLista: TLayout
+      Align = Top
+      Padding.Left = 16.000000000000000000
+      Padding.Top = 6.000000000000000000
+      Padding.Right = 12.000000000000000000
+      Padding.Bottom = 6.000000000000000000
+      Size.Width = 380.000000000000000000
+      Size.Height = 56.000000000000000000
+      Size.PlatformDefault = False
+      object RectBtnNova: TRectangle
+        Align = Right
+        Fill.Color = xFFF2C230
+        Position.X = 208.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 160.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 22.000000000000000000
+        YRadius = 22.000000000000000000
+        OnClick = RectBtnNovaClick
+        object LabBtnNova: TLabel
+          Align = Client
+          StyledSettings = [Family]
+          Size.Width = 160.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 15.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = xFF111111
+          TextSettings.HorzAlign = Center
+          Text = '+  Nova partida'
+          HitTest = False
+        end
+      end
+      object LabResumo: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 192.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = xFFA3A3A3
+        Text = '0 partidas'
+        HitTest = False
+      end
+    end
+    object LabVazio: TLabel
+      Align = Top
+      StyledSettings = [Family]
+      Margins.Left = 32.000000000000000000
+      Margins.Top = 40.000000000000000000
+      Margins.Right = 32.000000000000000000
+      Position.X = 32.000000000000000000
+      Position.Y = 96.000000000000000000
+      Size.Width = 316.000000000000000000
+      Size.Height = 80.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.FontColor = xFFA3A3A3
+      TextSettings.HorzAlign = Center
+      TextSettings.WordWrap = True
+      Text = 'Nenhuma partida jogada ainda. As partidas aparecem aqui, das mais recentes para as mais antigas.'
+      Visible = False
+      HitTest = False
+    end
+    object VsbHistorico: TVertScrollBox
+      Align = Client
+      Margins.Left = 12.000000000000000000
+      Margins.Top = 6.000000000000000000
+      Margins.Right = 12.000000000000000000
+      Size.Width = 356.000000000000000000
+      Size.Height = 578.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      ShowScrollBars = False
+      Viewport.Width = 356.000000000000000000
+      Viewport.Height = 578.000000000000000000
+    end
+  end
+end

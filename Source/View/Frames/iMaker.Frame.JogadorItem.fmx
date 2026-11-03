@@ -1,0 +1,97 @@
+object FrameJogadorItem: TFrameJogadorItem
+  Size.Width = 360.000000000000000000
+  Size.Height = 72.000000000000000000
+  Size.PlatformDefault = False
+  object RectFundo: TRectangle
+    Align = Client
+    Fill.Color = xFF171717
+    Margins.Bottom = 8.000000000000000000
+    Padding.Left = 12.000000000000000000
+    Padding.Right = 14.000000000000000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 64.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    XRadius = 14.000000000000000000
+    YRadius = 14.000000000000000000
+    object CircleAvatar: TCircle
+      Align = Left
+      Fill.Color = xFFF2C230
+      HitTest = False
+      Margins.Top = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 12.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object LabIniciais: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 44.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = xFF111111
+        TextSettings.HorzAlign = Center
+        Text = 'MH'
+        HitTest = False
+      end
+    end
+    object PathEditar: TPath
+      Align = Right
+      Data.Data = 'M4 20 L8 19 L19 8 L16 5 L5 16 Z M14 7 L17 10'
+      Fill.Kind = None
+      HitTest = False
+      Margins.Top = 22.000000000000000000
+      Margins.Bottom = 22.000000000000000000
+      Position.X = 326.000000000000000000
+      Size.Width = 20.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF5A5A5A
+      Stroke.Thickness = 1.500000000000000000
+      Stroke.Cap = Round
+      Stroke.Join = Round
+      WrapMode = Fit
+    end
+    object LayoutTextos: TLayout
+      Align = Client
+      Margins.Left = 12.000000000000000000
+      Margins.Top = 12.000000000000000000
+      Margins.Bottom = 12.000000000000000000
+      Size.Width = 250.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      object LabNome: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Size.Width = 250.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.WordWrap = False
+        TextSettings.Trimming = Character
+        Text = 'Nome do jogador'
+        HitTest = False
+      end
+      object LabDetalhe: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 250.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 12.000000000000000000
+        TextSettings.FontColor = xFFA3A3A3
+        TextSettings.WordWrap = False
+        TextSettings.Trimming = Character
+        Text = 'Nenhuma partida ainda'
+        HitTest = False
+      end
+    end
+  end
+end

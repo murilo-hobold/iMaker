@@ -1,0 +1,245 @@
+object FramePartidaItem: TFramePartidaItem
+  Size.Width = 360.000000000000000000
+  Size.Height = 136.000000000000000000
+  Size.PlatformDefault = False
+  object RectFundo: TRectangle
+    Align = Client
+    Fill.Color = xFF171717
+    Margins.Bottom = 10.000000000000000000
+    Padding.Left = 14.000000000000000000
+    Padding.Top = 12.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Padding.Bottom = 8.000000000000000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 126.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xFF2E2E2E
+    XRadius = 16.000000000000000000
+    YRadius = 16.000000000000000000
+    object LayoutCabecalho: TLayout
+      Align = Top
+      Position.X = 14.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      object RectStatus: TRectangle
+        Align = Right
+        Fill.Color = xFFF2C230
+        HitTest = False
+        Position.X = 236.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 11.000000000000000000
+        YRadius = 11.000000000000000000
+        object LabStatus: TLabel
+          Align = Client
+          StyledSettings = [Family]
+          Size.Width = 100.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = xFF111111
+          TextSettings.HorzAlign = Center
+          Text = 'FINALIZADA'
+          HitTest = False
+        end
+      end
+      object LabData: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 236.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = xFFA3A3A3
+        Text = '03/11/2026 20:15'
+        HitTest = False
+      end
+    end
+    object LayoutEq1: TLayout
+      Align = Top
+      Margins.Top = 6.000000000000000000
+      Position.X = 14.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      object ImgEq1: TImage
+        Align = Left
+        HitTest = False
+        Margins.Right = 6.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+      end
+      object LabTotalEq1: TLabel
+        Align = Right
+        StyledSettings = [Family]
+        Position.X = 256.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Trailing
+        Text = '0'
+        HitTest = False
+      end
+      object LabEq1: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 230.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = claWhite
+        TextSettings.WordWrap = False
+        TextSettings.Trimming = Character
+        Text = 'Equipe 1'
+        HitTest = False
+      end
+    end
+    object LayoutEq2: TLayout
+      Align = Top
+      Position.X = 14.000000000000000000
+      Position.Y = 70.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      object ImgEq2: TImage
+        Align = Left
+        HitTest = False
+        Margins.Right = 6.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+      end
+      object LabTotalEq2: TLabel
+        Align = Right
+        StyledSettings = [Family]
+        Position.X = 256.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Trailing
+        Text = '0'
+        HitTest = False
+      end
+      object LabEq2: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 230.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = claWhite
+        TextSettings.WordWrap = False
+        TextSettings.Trimming = Character
+        Text = 'Equipe 2'
+        HitTest = False
+      end
+    end
+    object LayoutEq3: TLayout
+      Align = Top
+      Position.X = 14.000000000000000000
+      Position.Y = 94.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      object ImgEq3: TImage
+        Align = Left
+        HitTest = False
+        Margins.Right = 6.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+      end
+      object LabTotalEq3: TLabel
+        Align = Right
+        StyledSettings = [Family]
+        Position.X = 256.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Trailing
+        Text = '0'
+        HitTest = False
+      end
+      object LabEq3: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 230.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = claWhite
+        TextSettings.WordWrap = False
+        TextSettings.Trimming = Character
+        Text = 'Equipe 3'
+        HitTest = False
+      end
+    end
+    object LayoutRodape: TLayout
+      Align = Bottom
+      Position.X = 14.000000000000000000
+      Position.Y = 86.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      object RectExcluir: TRectangle
+        Align = Right
+        Fill.Kind = None
+        Position.X = 304.000000000000000000
+        Size.Width = 32.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object PathExcluir: TPath
+          Align = Client
+          Data.Data = 'M4 7 L20 7 M9 7 L9 4 L15 4 L15 7 M6 7 L7 20 L17 20 L18 7 M10 11 L10 16 M14 11 L14 16'
+          Fill.Kind = None
+          HitTest = False
+          Margins.Left = 7.000000000000000000
+          Margins.Top = 7.000000000000000000
+          Margins.Right = 7.000000000000000000
+          Margins.Bottom = 7.000000000000000000
+          Size.Width = 18.000000000000000000
+          Size.Height = 18.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = xFF7A7A7A
+          Stroke.Thickness = 1.500000000000000000
+          Stroke.Cap = Round
+          Stroke.Join = Round
+          WrapMode = Fit
+        end
+      end
+      object LabInfo: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 304.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 12.000000000000000000
+        TextSettings.FontColor = xFFA3A3A3
+        TextSettings.WordWrap = False
+        TextSettings.Trimming = Character
+        Text = '12 rodadas'
+        HitTest = False
+      end
+    end
+  end
+end

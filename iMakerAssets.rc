@@ -1,0 +1,22 @@
+// Recursos do iMaker (emojis e sons).
+// O iMakerAssets.res já vem compilado. Se alterar algum arquivo, recompile com:
+//   brcc32 iMakerAssets.rc
+
+EMOJI_BURACO     RCDATA "Assets/Emojis/emoji_buraco.png"
+EMOJI_DERROTA    RCDATA "Assets/Emojis/emoji_derrota.png"
+EMOJI_EMPATE     RCDATA "Assets/Emojis/emoji_empate.png"
+EMOJI_LIDER      RCDATA "Assets/Emojis/emoji_lider.png"
+EMOJI_NEGATIVO   RCDATA "Assets/Emojis/emoji_negativo.png"
+EMOJI_OURO       RCDATA "Assets/Emojis/emoji_ouro.png"
+EMOJI_RODADA     RCDATA "Assets/Emojis/emoji_rodada.png"
+EMOJI_VIRADA     RCDATA "Assets/Emojis/emoji_virada.png"
+EMOJI_VITORIA    RCDATA "Assets/Emojis/emoji_vitoria.png"
+SOM_BURACO       RCDATA "Assets/Sons/som_buraco.wav"
+SOM_DERROTA      RCDATA "Assets/Sons/som_derrota.wav"
+SOM_EMPATE       RCDATA "Assets/Sons/som_empate.wav"
+SOM_NEGATIVO     RCDATA "Assets/Sons/som_negativo.wav"
+SOM_OURO         RCDATA "Assets/Sons/som_ouro.wav"
+SOM_PONTO        RCDATA "Assets/Sons/som_ponto.wav"
+SOM_RODADA       RCDATA "Assets/Sons/som_rodada.wav"
+SOM_VIRADA       RCDATA "Assets/Sons/som_virada.wav"
+SOM_VITORIA      RCDATA "Assets/Sons/som_vitoria.wav"

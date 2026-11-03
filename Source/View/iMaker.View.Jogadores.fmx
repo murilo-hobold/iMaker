@@ -1,0 +1,271 @@
+object FormJogadores: TFormJogadores
+  Left = 0
+  Top = 0
+  Caption = 'Jogadores'
+  ClientHeight = 640
+  ClientWidth = 380
+  Fill.Color = xFF0B0B0B
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object LayoutPrincipal: TLayout
+    Align = Client
+    Size.Width = 380.000000000000000000
+    Size.Height = 640.000000000000000000
+    Size.PlatformDefault = False
+    object LayoutTopoLista: TLayout
+      Align = Top
+      Padding.Left = 16.000000000000000000
+      Padding.Top = 6.000000000000000000
+      Padding.Right = 12.000000000000000000
+      Padding.Bottom = 6.000000000000000000
+      Size.Width = 380.000000000000000000
+      Size.Height = 56.000000000000000000
+      Size.PlatformDefault = False
+      object RectBtnNovo: TRectangle
+        Align = Right
+        Fill.Color = xFFF2C230
+        Position.X = 208.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 160.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 22.000000000000000000
+        YRadius = 22.000000000000000000
+        OnClick = RectBtnNovoClick
+        object LabBtnNovo: TLabel
+          Align = Client
+          StyledSettings = [Family]
+          Size.Width = 160.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 15.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = xFF111111
+          TextSettings.HorzAlign = Center
+          Text = '+  Novo jogador'
+          HitTest = False
+        end
+      end
+      object LabContagem: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 192.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = xFFA3A3A3
+        Text = '0 jogadores'
+        HitTest = False
+      end
+    end
+    object LabVazio: TLabel
+      Align = Top
+      StyledSettings = [Family]
+      Margins.Left = 32.000000000000000000
+      Margins.Top = 40.000000000000000000
+      Margins.Right = 32.000000000000000000
+      Position.X = 32.000000000000000000
+      Position.Y = 96.000000000000000000
+      Size.Width = 316.000000000000000000
+      Size.Height = 80.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.FontColor = xFFA3A3A3
+      TextSettings.HorzAlign = Center
+      TextSettings.WordWrap = True
+      Text = 'Nenhum jogador cadastrado ainda. Toque em "Novo jogador" e cadastre quem vai jogar.'
+      Visible = False
+      HitTest = False
+    end
+    object VsbJogadores: TVertScrollBox
+      Align = Client
+      Margins.Left = 12.000000000000000000
+      Margins.Top = 6.000000000000000000
+      Margins.Right = 12.000000000000000000
+      Size.Width = 356.000000000000000000
+      Size.Height = 578.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      ShowScrollBars = False
+      Viewport.Width = 356.000000000000000000
+      Viewport.Height = 578.000000000000000000
+    end
+    object LayoutModal: TLayout
+      Align = Contents
+      Size.Width = 380.000000000000000000
+      Size.Height = 640.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      object RectModalFundo: TRectangle
+        Align = Contents
+        Fill.Color = xC8000000
+        Size.Width = 380.000000000000000000
+        Size.Height = 640.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        OnClick = RectBtnCancelarClick
+      end
+      object RectModalCard: TRectangle
+        Fill.Color = xFF171717
+        Padding.Left = 16.000000000000000000
+        Padding.Top = 16.000000000000000000
+        Padding.Right = 16.000000000000000000
+        Padding.Bottom = 16.000000000000000000
+        Position.X = 16.000000000000000000
+        Position.Y = 48.000000000000000000
+        Size.Width = 348.000000000000000000
+        Size.Height = 262.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFFB8860B
+        Stroke.Thickness = 1.500000000000000000
+        XRadius = 18.000000000000000000
+        YRadius = 18.000000000000000000
+        object LabModalTitulo: TLabel
+          Align = Top
+          StyledSettings = [Family]
+          Position.X = 16.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 316.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          Text = 'Novo jogador'
+          HitTest = False
+        end
+        object LabNomeTitulo: TLabel
+          Align = Top
+          StyledSettings = [Family]
+          Margins.Top = 10.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 56.000000000000000000
+          Size.Width = 316.000000000000000000
+          Size.Height = 20.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 13.000000000000000000
+          TextSettings.FontColor = xFFA3A3A3
+          Text = 'Nome'
+          HitTest = False
+        end
+        object RectNome: TRectangle
+          Align = Top
+          Fill.Color = xFF222222
+          Margins.Top = 4.000000000000000000
+          Padding.Left = 12.000000000000000000
+          Padding.Right = 12.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 80.000000000000000000
+          Size.Width = 316.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 10.000000000000000000
+          YRadius = 10.000000000000000000
+          object EdtNome: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            StyleLookup = 'transparentedit'
+            TabOrder = 0
+            MaxLength = 60
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claWhite
+            Size.Width = 292.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family]
+            TextPrompt = 'Ex.: Murilo'
+          end
+        end
+        object RectBtnSalvar: TRectangle
+          Align = Top
+          Fill.Color = xFFF2C230
+          Margins.Top = 16.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 146.000000000000000000
+          Size.Width = 316.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 14.000000000000000000
+          YRadius = 14.000000000000000000
+          OnClick = RectBtnSalvarClick
+          object LabBtnSalvar: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Size.Width = 316.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = xFF111111
+            TextSettings.HorzAlign = Center
+            Text = 'Salvar'
+            HitTest = False
+          end
+        end
+        object LayoutBotoes: TLayout
+          Align = Top
+          Margins.Top = 8.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 204.000000000000000000
+          Size.Width = 316.000000000000000000
+          Size.Height = 46.000000000000000000
+          Size.PlatformDefault = False
+          object RectBtnExcluir: TRectangle
+            Align = Right
+            Fill.Color = xFF2A1416
+            Margins.Left = 8.000000000000000000
+            Position.X = 186.000000000000000000
+            Size.Width = 130.000000000000000000
+            Size.Height = 46.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = xFFE5484D
+            XRadius = 14.000000000000000000
+            YRadius = 14.000000000000000000
+            OnClick = RectBtnExcluirClick
+            object LabBtnExcluir: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Size.Width = 130.000000000000000000
+              Size.Height = 46.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 15.000000000000000000
+              TextSettings.FontColor = xFFE5484D
+              TextSettings.HorzAlign = Center
+              Text = 'Excluir'
+              HitTest = False
+            end
+          end
+          object RectBtnCancelar: TRectangle
+            Align = Client
+            Fill.Color = xFF222222
+            Size.Width = 178.000000000000000000
+            Size.Height = 46.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 14.000000000000000000
+            YRadius = 14.000000000000000000
+            OnClick = RectBtnCancelarClick
+            object LabBtnCancelar: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Size.Width = 178.000000000000000000
+              Size.Height = 46.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 15.000000000000000000
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Cancelar'
+              HitTest = False
+            end
+          end
+        end
+      end
+    end
+  end
+end

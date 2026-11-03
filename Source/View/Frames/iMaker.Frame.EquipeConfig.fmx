@@ -1,0 +1,220 @@
+object FrameEquipeConfig: TFrameEquipeConfig
+  Size.Width = 360.000000000000000000
+  Size.Height = 250.000000000000000000
+  Size.PlatformDefault = False
+  object RectCard: TRectangle
+    Align = Client
+    Fill.Color = xFF171717
+    Margins.Bottom = 12.000000000000000000
+    Padding.Left = 12.000000000000000000
+    Padding.Top = 12.000000000000000000
+    Padding.Right = 12.000000000000000000
+    Padding.Bottom = 12.000000000000000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 238.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xFF2E2E2E
+    XRadius = 16.000000000000000000
+    YRadius = 16.000000000000000000
+    object LayoutTopo: TLayout
+      Align = Top
+      Position.X = 12.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      object CircleCor: TCircle
+        Align = Left
+        Fill.Color = xFFF2C230
+        HitTest = False
+        Margins.Top = 4.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 4.000000000000000000
+        Size.Width = 12.000000000000000000
+        Size.Height = 12.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+      object LabTitulo: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 316.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 12.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = xFFA3A3A3
+        Text = 'EQUIPE 1'
+        HitTest = False
+      end
+    end
+    object RectNome: TRectangle
+      Align = Top
+      Fill.Color = xFF222222
+      Margins.Top = 8.000000000000000000
+      Padding.Left = 10.000000000000000000
+      Padding.Right = 10.000000000000000000
+      Position.X = 12.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      object EdtNome: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Client
+        StyleLookup = 'transparentedit'
+        TabOrder = 0
+        MaxLength = 30
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        Size.Width = 316.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Family]
+        TextPrompt = 'Nome da equipe'
+      end
+    end
+    object RectSlot1: TRectangle
+      Align = Top
+      Fill.Color = xFF222222
+      Margins.Top = 8.000000000000000000
+      Padding.Left = 12.000000000000000000
+      Padding.Right = 12.000000000000000000
+      Position.X = 12.000000000000000000
+      Position.Y = 92.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF2E2E2E
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      Tag = 1
+      object PathSeta1: TPath
+        Align = Right
+        Data.Data = 'M9 6 L15 12 L9 18'
+        Fill.Kind = None
+        HitTest = False
+        Margins.Top = 15.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.X = 310.000000000000000000
+        Size.Width = 14.000000000000000000
+        Size.Height = 14.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFFF2C230
+        Stroke.Thickness = 2.000000000000000000
+        Stroke.Cap = Round
+        Stroke.Join = Round
+        WrapMode = Fit
+      end
+      object LabSlot1: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 298.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.FontColor = xFFA3A3A3
+        TextSettings.WordWrap = False
+        TextSettings.Trimming = Character
+        Text = 'Escolher jogador'
+        HitTest = False
+      end
+    end
+    object RectSlot2: TRectangle
+      Align = Top
+      Fill.Color = xFF222222
+      Margins.Top = 8.000000000000000000
+      Padding.Left = 12.000000000000000000
+      Padding.Right = 12.000000000000000000
+      Position.X = 12.000000000000000000
+      Position.Y = 144.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF2E2E2E
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      Tag = 2
+      object PathSeta2: TPath
+        Align = Right
+        Data.Data = 'M9 6 L15 12 L9 18'
+        Fill.Kind = None
+        HitTest = False
+        Margins.Top = 15.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.X = 310.000000000000000000
+        Size.Width = 14.000000000000000000
+        Size.Height = 14.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFFF2C230
+        Stroke.Thickness = 2.000000000000000000
+        Stroke.Cap = Round
+        Stroke.Join = Round
+        WrapMode = Fit
+      end
+      object LabSlot2: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 298.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.FontColor = xFFA3A3A3
+        TextSettings.WordWrap = False
+        TextSettings.Trimming = Character
+        Text = 'Escolher jogador'
+        HitTest = False
+      end
+    end
+    object RectSlot3: TRectangle
+      Align = Top
+      Fill.Color = xFF222222
+      Margins.Top = 8.000000000000000000
+      Padding.Left = 12.000000000000000000
+      Padding.Right = 12.000000000000000000
+      Position.X = 12.000000000000000000
+      Position.Y = 196.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF2E2E2E
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      Tag = 3
+      object PathSeta3: TPath
+        Align = Right
+        Data.Data = 'M9 6 L15 12 L9 18'
+        Fill.Kind = None
+        HitTest = False
+        Margins.Top = 15.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.X = 310.000000000000000000
+        Size.Width = 14.000000000000000000
+        Size.Height = 14.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFFF2C230
+        Stroke.Thickness = 2.000000000000000000
+        Stroke.Cap = Round
+        Stroke.Join = Round
+        WrapMode = Fit
+      end
+      object LabSlot3: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 298.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.FontColor = xFFA3A3A3
+        TextSettings.WordWrap = False
+        TextSettings.Trimming = Character
+        Text = 'Escolher jogador'
+        HitTest = False
+      end
+    end
+  end
+end

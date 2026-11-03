@@ -1,0 +1,81 @@
+object FramePicker: TFramePicker
+  Size.Width = 360.000000000000000000
+  Size.Height = 640.000000000000000000
+  Size.PlatformDefault = False
+  object RectFundo: TRectangle
+    Align = Contents
+    Fill.Color = xC8000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 640.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    OnClick = RectCancelarClick
+  end
+  object RectCard: TRectangle
+    Fill.Color = xFF171717
+    Padding.Left = 14.000000000000000000
+    Padding.Top = 14.000000000000000000
+    Padding.Right = 14.000000000000000000
+    Padding.Bottom = 14.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 328.000000000000000000
+    Size.Height = 400.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xFFB8860B
+    Stroke.Thickness = 1.500000000000000000
+    XRadius = 18.000000000000000000
+    YRadius = 18.000000000000000000
+    object LabTitulo: TLabel
+      Align = Top
+      StyledSettings = [Family]
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 14.000000000000000000
+      Position.Y = 14.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      Text = 'Escolha'
+      HitTest = False
+    end
+    object RectCancelar: TRectangle
+      Align = Bottom
+      Fill.Color = xFF222222
+      Margins.Top = 10.000000000000000000
+      Position.X = 14.000000000000000000
+      Position.Y = 342.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 12.000000000000000000
+      YRadius = 12.000000000000000000
+      OnClick = RectCancelarClick
+      object LabCancelar: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 300.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Center
+        Text = 'Cancelar'
+        HitTest = False
+      end
+    end
+    object VsbOpcoes: TVertScrollBox
+      Align = Client
+      Size.Width = 300.000000000000000000
+      Size.Height = 246.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      ShowScrollBars = False
+      Viewport.Width = 300.000000000000000000
+      Viewport.Height = 246.000000000000000000
+    end
+  end
+end

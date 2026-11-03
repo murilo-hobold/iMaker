@@ -1,0 +1,158 @@
+object FrameEquipePlacar: TFrameEquipePlacar
+  Size.Width = 170.000000000000000000
+  Size.Height = 150.000000000000000000
+  Size.PlatformDefault = False
+  object RectCard: TRectangle
+    Align = Client
+    Fill.Color = xFF171717
+    Margins.Left = 4.000000000000000000
+    Margins.Right = 4.000000000000000000
+    Padding.Left = 12.000000000000000000
+    Padding.Top = 10.000000000000000000
+    Padding.Right = 12.000000000000000000
+    Padding.Bottom = 10.000000000000000000
+    Size.Width = 162.000000000000000000
+    Size.Height = 150.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xFF2E2E2E
+    Stroke.Thickness = 1.500000000000000000
+    XRadius = 16.000000000000000000
+    YRadius = 16.000000000000000000
+    object LayoutTopo: TLayout
+      Align = Top
+      Position.X = 12.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 138.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      object ImgLider: TImage
+        Align = Right
+        HitTest = False
+        Position.X = 114.000000000000000000
+        Size.Width = 24.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+      end
+      object LabNome: TLabel
+        Align = Client
+        StyledSettings = [Family]
+        Size.Width = 114.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = xFFF2C230
+        TextSettings.WordWrap = False
+        TextSettings.Trimming = Character
+        Text = 'Equipe'
+        HitTest = False
+      end
+    end
+    object LabJogadores: TLabel
+      Align = Top
+      StyledSettings = [Family]
+      Position.X = 12.000000000000000000
+      Position.Y = 34.000000000000000000
+      Size.Width = 138.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 12.000000000000000000
+      TextSettings.FontColor = xFFA3A3A3
+      TextSettings.WordWrap = False
+      TextSettings.Trimming = Character
+      Text = 'Jogadores'
+      HitTest = False
+    end
+    object LayoutRodape: TLayout
+      Align = Bottom
+      Position.X = 12.000000000000000000
+      Position.Y = 106.000000000000000000
+      Size.Width = 138.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      object RectBarraFundo: TRectangle
+        Align = Top
+        Fill.Color = xFF2E2E2E
+        Size.Width = 138.000000000000000000
+        Size.Height = 6.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        HitTest = False
+        OnResize = RectBarraFundoResize
+        object RectBarra: TRectangle
+          Align = Left
+          Fill.Color = xFFF2C230
+          Size.Width = 40.000000000000000000
+          Size.Height = 6.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+          HitTest = False
+        end
+      end
+      object LayoutInfo: TLayout
+        Align = Client
+        Margins.Top = 6.000000000000000000
+        Size.Width = 138.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        object RectBuraco: TRectangle
+          Align = Right
+          Fill.Color = xFFF2C230
+          Margins.Top = 2.000000000000000000
+          Margins.Bottom = 2.000000000000000000
+          Position.X = 76.000000000000000000
+          Size.Width = 62.000000000000000000
+          Size.Height = 18.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 9.000000000000000000
+          YRadius = 9.000000000000000000
+          HitTest = False
+          object LabBuraco: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Size.Width = 62.000000000000000000
+            Size.Height = 18.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 10.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = xFF111111
+            TextSettings.HorzAlign = Center
+            Text = 'NO BURACO'
+            HitTest = False
+          end
+        end
+        object LabFalta: TLabel
+          Align = Client
+          StyledSettings = [Family]
+          Size.Width = 76.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.FontColor = xFFA3A3A3
+          TextSettings.WordWrap = False
+          TextSettings.Trimming = Character
+          Text = 'faltam 2.000'
+          HitTest = False
+        end
+      end
+    end
+    object LabTotal: TLabel
+      Align = Client
+      StyledSettings = [Family]
+      Size.Width = 138.000000000000000000
+      Size.Height = 54.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 36.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      Text = '0'
+      HitTest = False
+    end
+  end
+end

@@ -1,0 +1,1090 @@
+object FormJogo: TFormJogo
+  Left = 0
+  Top = 0
+  Caption = 'Partida'
+  ClientHeight = 640
+  ClientWidth = 380
+  Fill.Color = xFF0B0B0B
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object LayoutPrincipal: TLayout
+    Align = Client
+    Size.Width = 380.000000000000000000
+    Size.Height = 640.000000000000000000
+    Size.PlatformDefault = False
+    object LayoutVazio: TLayout
+      Align = Client
+      Padding.Left = 32.000000000000000000
+      Padding.Right = 32.000000000000000000
+      Size.Width = 380.000000000000000000
+      Size.Height = 640.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      object ImgVazio: TImage
+        Align = Top
+        HitTest = False
+        Margins.Top = 60.000000000000000000
+        Position.X = 32.000000000000000000
+        Position.Y = 60.000000000000000000
+        Size.Width = 316.000000000000000000
+        Size.Height = 150.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Fit
+      end
+      object LabVazioTitulo: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Top = 16.000000000000000000
+        Position.X = 32.000000000000000000
+        Position.Y = 226.000000000000000000
+        Size.Width = 316.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Center
+        Text = 'Nenhuma partida em andamento'
+        HitTest = False
+      end
+      object LabVazioMsg: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Top = 6.000000000000000000
+        Position.X = 32.000000000000000000
+        Position.Y = 264.000000000000000000
+        Size.Width = 316.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFFA3A3A3
+        TextSettings.HorzAlign = Center
+        TextSettings.WordWrap = True
+        Text = 'Escolha as equipes e comece a marcar os pontos da canastra.'
+        HitTest = False
+      end
+      object RectBtnNovaVazio: TRectangle
+        Align = Top
+        Fill.Color = xFFF2C230
+        Margins.Top = 24.000000000000000000
+        Position.X = 32.000000000000000000
+        Position.Y = 332.000000000000000000
+        Size.Width = 316.000000000000000000
+        Size.Height = 54.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 16.000000000000000000
+        YRadius = 16.000000000000000000
+        OnClick = BtnNovaPartidaClick
+        object LabBtnNovaVazio: TLabel
+          Align = Client
+          StyledSettings = [Family]
+          Size.Width = 316.000000000000000000
+          Size.Height = 54.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 17.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = xFF111111
+          TextSettings.HorzAlign = Center
+          Text = 'Nova partida'
+          HitTest = False
+        end
+      end
+    end
+    object LayoutPartida: TLayout
+      Align = Client
+      Padding.Left = 12.000000000000000000
+      Padding.Right = 12.000000000000000000
+      Size.Width = 380.000000000000000000
+      Size.Height = 640.000000000000000000
+      Size.PlatformDefault = False
+      object RectCaptura: TRectangle
+        Align = Top
+        Fill.Color = xFF0B0B0B
+        Padding.Top = 4.000000000000000000
+        Padding.Bottom = 4.000000000000000000
+        Position.X = 12.000000000000000000
+        Size.Width = 356.000000000000000000
+        Size.Height = 200.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object LayoutInfo: TLayout
+          Align = Top
+          Position.Y = 4.000000000000000000
+          Size.Width = 356.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          object RectBtnCompartilhar: TRectangle
+            Align = Right
+            Fill.Color = xFF171717
+            Position.X = 320.000000000000000000
+            Size.Width = 36.000000000000000000
+            Size.Height = 36.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 18.000000000000000000
+            YRadius = 18.000000000000000000
+            OnClick = RectBtnCompartilharClick
+            object PathCompartilhar: TPath
+              Align = Client
+              Data.Data = 'M18 8 C19.7 8 21 6.7 21 5 C21 3.3 19.7 2 18 2 C16.3 2 15 3.3 15 5 C15 6.7 16.3 8 18 8 Z M6 15 C7.7 15 9 13.7 9 12 C9 10.3 7.7 9 6 9 C4.3 9 3 10.3 3 12 C3 13.7 4.3 15 6 15 Z M18 22 C19.7 22 21 20.7 21 19 C21 17.3 19.7 16 18 16 C16.3 16 15 17.3 15 19 C15 20.7 16.3 22 18 22 Z M8.6 13.5 L15.4 17.5 M15.4 6.5 L8.6 10.5'
+              Fill.Kind = None
+              HitTest = False
+              Margins.Left = 9.000000000000000000
+              Margins.Top = 9.000000000000000000
+              Margins.Right = 9.000000000000000000
+              Margins.Bottom = 9.000000000000000000
+              Size.Width = 18.000000000000000000
+              Size.Height = 18.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFFF2C230
+              Stroke.Thickness = 1.500000000000000000
+              Stroke.Cap = Round
+              Stroke.Join = Round
+              WrapMode = Fit
+            end
+          end
+          object RectChipMeta: TRectangle
+            Align = Left
+            Fill.Color = xFF171717
+            Size.Width = 170.000000000000000000
+            Size.Height = 36.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 18.000000000000000000
+            YRadius = 18.000000000000000000
+            HitTest = False
+            object LabMeta: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Size.Width = 170.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 12.000000000000000000
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Meta 2.000  '#183'  Buraco 1.000'
+              HitTest = False
+            end
+          end
+          object RectChipTempo: TRectangle
+            Align = Left
+            Fill.Color = xFF171717
+            Margins.Left = 8.000000000000000000
+            Padding.Left = 10.000000000000000000
+            Padding.Right = 10.000000000000000000
+            Position.X = 178.000000000000000000
+            Size.Width = 96.000000000000000000
+            Size.Height = 36.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 18.000000000000000000
+            YRadius = 18.000000000000000000
+            HitTest = False
+            object PathTempo: TPath
+              Align = Left
+              Data.Data = 'M12 5 C16.4 5 20 8.6 20 13 C20 17.4 16.4 21 12 21 C7.6 21 4 17.4 4 13 C4 8.6 7.6 5 12 5 Z M12 9 L12 13 L14.5 15 M10 2 L14 2'
+              Fill.Kind = None
+              HitTest = False
+              Margins.Top = 10.000000000000000000
+              Margins.Right = 6.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Position.X = 10.000000000000000000
+              Size.Width = 16.000000000000000000
+              Size.Height = 16.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFFF2C230
+              Stroke.Thickness = 1.500000000000000000
+              Stroke.Cap = Round
+              Stroke.Join = Round
+              WrapMode = Fit
+            end
+            object LabTempo: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Size.Width = 54.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 13.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Text = '00:00'
+              HitTest = False
+            end
+          end
+        end
+        object LayoutPlacar: TLayout
+          Align = Top
+          Margins.Top = 8.000000000000000000
+          Position.Y = 48.000000000000000000
+          Size.Width = 356.000000000000000000
+          Size.Height = 150.000000000000000000
+          Size.PlatformDefault = False
+          OnResize = LayoutPlacarResize
+        end
+        object RectVencedor: TRectangle
+          Align = Top
+          Fill.Color = xFF171717
+          Margins.Top = 10.000000000000000000
+          Padding.Left = 10.000000000000000000
+          Padding.Right = 12.000000000000000000
+          Position.Y = 208.000000000000000000
+          Size.Width = 356.000000000000000000
+          Size.Height = 64.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = xFFF2C230
+          Stroke.Thickness = 1.500000000000000000
+          Visible = False
+          XRadius = 16.000000000000000000
+          YRadius = 16.000000000000000000
+          HitTest = False
+          object ImgVencedor: TImage
+            Align = Left
+            HitTest = False
+            Margins.Top = 8.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Margins.Bottom = 8.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            WrapMode = Fit
+          end
+          object LayoutVencedorTextos: TLayout
+            Align = Client
+            Margins.Top = 10.000000000000000000
+            Margins.Bottom = 10.000000000000000000
+            Size.Width = 276.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            object LabVencedorTitulo: TLabel
+              Align = Top
+              StyledSettings = [Family]
+              Size.Width = 276.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = xFFF2C230
+              TextSettings.WordWrap = False
+              TextSettings.Trimming = Character
+              Text = 'Vencedor'
+              HitTest = False
+            end
+            object LabVencedorMsg: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Size.Width = 276.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 12.000000000000000000
+              TextSettings.FontColor = xFFA3A3A3
+              TextSettings.WordWrap = False
+              TextSettings.Trimming = Character
+              Text = 'Partida encerrada'
+              HitTest = False
+            end
+          end
+        end
+      end
+      object LayoutAcoes: TLayout
+        Align = Top
+        Position.X = 12.000000000000000000
+        Position.Y = 200.000000000000000000
+        Size.Width = 356.000000000000000000
+        Size.Height = 98.000000000000000000
+        Size.PlatformDefault = False
+        object RectProxima: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Size.Width = 356.000000000000000000
+          Size.Height = 38.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          HitTest = False
+          object PathDealer: TPath
+            Align = Left
+            Data.Data = 'M3 7 L7 7 C11 7 13 17 17 17 L21 17 M18 14 L21 17 L18 20 M3 17 L7 17 C9 17 10 15 11 13.5 M13 10.5 C14 9 15 7 17 7 L21 7 M18 4 L21 7 L18 10'
+            Fill.Kind = None
+            HitTest = False
+            Margins.Left = 4.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Margins.Bottom = 10.000000000000000000
+            Position.X = 4.000000000000000000
+            Position.Y = 10.000000000000000000
+            Size.Width = 18.000000000000000000
+            Size.Height = 18.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = xFFF2C230
+            Stroke.Thickness = 1.500000000000000000
+            Stroke.Cap = Round
+            Stroke.Join = Round
+            WrapMode = Fit
+          end
+          object LabProxima: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Size.Width = 324.000000000000000000
+            Size.Height = 38.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.FontColor = claWhite
+            TextSettings.WordWrap = False
+            TextSettings.Trimming = Character
+            Text = 'Rodada 1  '#183'  Fulano embaralha'
+            HitTest = False
+          end
+        end
+        object RectBtnLancar: TRectangle
+          Align = Top
+          Fill.Color = xFFF2C230
+          Margins.Top = 4.000000000000000000
+          Position.Y = 42.000000000000000000
+          Size.Width = 356.000000000000000000
+          Size.Height = 54.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 16.000000000000000000
+          YRadius = 16.000000000000000000
+          OnClick = RectBtnLancarClick
+          object LabBtnLancar: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Size.Width = 356.000000000000000000
+            Size.Height = 54.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 17.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = xFF111111
+            TextSettings.HorzAlign = Center
+            Text = '+   Lan'#231'ar rodada'
+            HitTest = False
+          end
+        end
+        object RectBtnNovaFim: TRectangle
+          Align = Top
+          Fill.Color = xFFF2C230
+          Margins.Top = 4.000000000000000000
+          Position.Y = 100.000000000000000000
+          Size.Width = 356.000000000000000000
+          Size.Height = 54.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          Visible = False
+          XRadius = 16.000000000000000000
+          YRadius = 16.000000000000000000
+          OnClick = BtnNovaPartidaClick
+          object LabBtnNovaFim: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Size.Width = 356.000000000000000000
+            Size.Height = 54.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 17.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = xFF111111
+            TextSettings.HorzAlign = Center
+            Text = 'Nova partida'
+            HitTest = False
+          end
+        end
+      end
+      object LayoutCabecalho: TLayout
+        Align = Top
+        Margins.Top = 12.000000000000000000
+        Position.X = 12.000000000000000000
+        Position.Y = 310.000000000000000000
+        Size.Width = 356.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        object LabCabNumero: TLabel
+          Align = Left
+          StyledSettings = [Family]
+          Size.Width = 40.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = xFF7A7A7A
+          TextSettings.HorzAlign = Center
+          Text = '#'
+          HitTest = False
+        end
+        object LabCabDealer: TLabel
+          Align = Left
+          StyledSettings = [Family]
+          Position.X = 40.000000000000000000
+          Size.Width = 86.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = xFF7A7A7A
+          Text = 'EMBARALHOU'
+          HitTest = False
+        end
+        object LayoutCabEspaco: TLayout
+          Align = Right
+          Position.X = 322.000000000000000000
+          Size.Width = 34.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object LayoutCabPontos: TLayout
+          Align = Client
+          Size.Width = 196.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+          OnResize = LayoutCabPontosResize
+          object LabCab1: TLabel
+            Align = Left
+            StyledSettings = [Family]
+            Size.Width = 65.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 11.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = xFFF2C230
+            TextSettings.HorzAlign = Center
+            TextSettings.WordWrap = False
+            TextSettings.Trimming = Character
+            Text = 'EQUIPE 1'
+            HitTest = False
+          end
+          object LabCab2: TLabel
+            Align = Left
+            StyledSettings = [Family]
+            Position.X = 65.000000000000000000
+            Size.Width = 65.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 11.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claWhite
+            TextSettings.HorzAlign = Center
+            TextSettings.WordWrap = False
+            TextSettings.Trimming = Character
+            Text = 'EQUIPE 2'
+            HitTest = False
+          end
+          object LabCab3: TLabel
+            Align = Left
+            StyledSettings = [Family]
+            Position.X = 130.000000000000000000
+            Size.Width = 65.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 11.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = xFFC9C9C9
+            TextSettings.HorzAlign = Center
+            TextSettings.WordWrap = False
+            TextSettings.Trimming = Character
+            Text = 'EQUIPE 3'
+            HitTest = False
+          end
+        end
+      end
+      object LabSemRodadas: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Top = 16.000000000000000000
+        Position.X = 12.000000000000000000
+        Position.Y = 350.000000000000000000
+        Size.Width = 356.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = xFF7A7A7A
+        TextSettings.HorzAlign = Center
+        TextSettings.WordWrap = True
+        Text = 'Nenhuma rodada lan'#231'ada ainda. Toque em "Lan'#231'ar rodada" ao fim da primeira m'#227'o.'
+        HitTest = False
+      end
+      object VsbRodadas: TVertScrollBox
+        Align = Client
+        Margins.Top = 6.000000000000000000
+        Size.Width = 356.000000000000000000
+        Size.Height = 240.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        ShowScrollBars = False
+        Viewport.Width = 356.000000000000000000
+        Viewport.Height = 240.000000000000000000
+      end
+    end
+    object LayoutModalRodada: TLayout
+      Align = Contents
+      Size.Width = 380.000000000000000000
+      Size.Height = 640.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      object RectModalFundo: TRectangle
+        Align = Contents
+        Fill.Color = xC8000000
+        Size.Width = 380.000000000000000000
+        Size.Height = 640.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        OnClick = RectBtnCancelarClick
+      end
+      object RectModalCard: TRectangle
+        Fill.Color = xFF171717
+        Padding.Left = 16.000000000000000000
+        Padding.Top = 16.000000000000000000
+        Padding.Right = 16.000000000000000000
+        Padding.Bottom = 16.000000000000000000
+        Position.X = 16.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 348.000000000000000000
+        Size.Height = 540.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFFB8860B
+        Stroke.Thickness = 1.500000000000000000
+        XRadius = 18.000000000000000000
+        YRadius = 18.000000000000000000
+        object LabModalTitulo: TLabel
+          Align = Top
+          StyledSettings = [Family]
+          Position.X = 16.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 316.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          Text = 'Rodada 1'
+          HitTest = False
+        end
+        object LabModalSub: TLabel
+          Align = Top
+          StyledSettings = [Family]
+          Position.X = 16.000000000000000000
+          Position.Y = 46.000000000000000000
+          Size.Width = 316.000000000000000000
+          Size.Height = 18.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 12.000000000000000000
+          TextSettings.FontColor = xFFA3A3A3
+          Text = 'Informe o total de pontos de cada equipe nesta rodada.'
+          HitTest = False
+        end
+        object LayoutCampo1: TLayout
+          Align = Top
+          Margins.Top = 10.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 74.000000000000000000
+          Size.Width = 316.000000000000000000
+          Size.Height = 72.000000000000000000
+          Size.PlatformDefault = False
+          object LabCampo1: TLabel
+            Align = Top
+            StyledSettings = [Family]
+            Size.Width = 316.000000000000000000
+            Size.Height = 20.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 13.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = xFFF2C230
+            TextSettings.WordWrap = False
+            TextSettings.Trimming = Character
+            Text = 'Equipe 1'
+            HitTest = False
+          end
+          object RectSinal1: TRectangle
+            Align = Right
+            Fill.Color = xFF222222
+            Margins.Left = 8.000000000000000000
+            Margins.Top = 4.000000000000000000
+            Position.X = 264.000000000000000000
+            Position.Y = 24.000000000000000000
+            Size.Width = 52.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            Tag = 1
+            OnClick = RectSinalClick
+            object LabSinal1: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Size.Width = 52.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 22.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = xFFF2C230
+              TextSettings.HorzAlign = Center
+              Text = #177
+              HitTest = False
+            end
+          end
+          object RectEdit1: TRectangle
+            Align = Client
+            Fill.Color = xFF222222
+            Margins.Top = 4.000000000000000000
+            Padding.Left = 12.000000000000000000
+            Padding.Right = 12.000000000000000000
+            Size.Width = 256.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            object EdtPontos1: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              StyleLookup = 'transparentedit'
+              TabOrder = 0
+              KeyboardType = NumbersAndPunctuation
+              FilterChar = '-0123456789'
+              MaxLength = 6
+              TextSettings.Font.Size = 22.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Size.Width = 232.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [Family]
+              TextPrompt = '0'
+            end
+          end
+        end
+        object LayoutCampo2: TLayout
+          Align = Top
+          Margins.Top = 10.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 156.000000000000000000
+          Size.Width = 316.000000000000000000
+          Size.Height = 72.000000000000000000
+          Size.PlatformDefault = False
+          object LabCampo2: TLabel
+            Align = Top
+            StyledSettings = [Family]
+            Size.Width = 316.000000000000000000
+            Size.Height = 20.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 13.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claWhite
+            TextSettings.WordWrap = False
+            TextSettings.Trimming = Character
+            Text = 'Equipe 2'
+            HitTest = False
+          end
+          object RectSinal2: TRectangle
+            Align = Right
+            Fill.Color = xFF222222
+            Margins.Left = 8.000000000000000000
+            Margins.Top = 4.000000000000000000
+            Position.X = 264.000000000000000000
+            Position.Y = 24.000000000000000000
+            Size.Width = 52.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            Tag = 2
+            OnClick = RectSinalClick
+            object LabSinal2: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Size.Width = 52.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 22.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = xFFF2C230
+              TextSettings.HorzAlign = Center
+              Text = #177
+              HitTest = False
+            end
+          end
+          object RectEdit2: TRectangle
+            Align = Client
+            Fill.Color = xFF222222
+            Margins.Top = 4.000000000000000000
+            Padding.Left = 12.000000000000000000
+            Padding.Right = 12.000000000000000000
+            Size.Width = 256.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            object EdtPontos2: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              StyleLookup = 'transparentedit'
+              TabOrder = 1
+              KeyboardType = NumbersAndPunctuation
+              FilterChar = '-0123456789'
+              MaxLength = 6
+              TextSettings.Font.Size = 22.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Size.Width = 232.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [Family]
+              TextPrompt = '0'
+            end
+          end
+        end
+        object LayoutCampo3: TLayout
+          Align = Top
+          Margins.Top = 10.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 238.000000000000000000
+          Size.Width = 316.000000000000000000
+          Size.Height = 72.000000000000000000
+          Size.PlatformDefault = False
+          object LabCampo3: TLabel
+            Align = Top
+            StyledSettings = [Family]
+            Size.Width = 316.000000000000000000
+            Size.Height = 20.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 13.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = xFFC9C9C9
+            TextSettings.WordWrap = False
+            TextSettings.Trimming = Character
+            Text = 'Equipe 3'
+            HitTest = False
+          end
+          object RectSinal3: TRectangle
+            Align = Right
+            Fill.Color = xFF222222
+            Margins.Left = 8.000000000000000000
+            Margins.Top = 4.000000000000000000
+            Position.X = 264.000000000000000000
+            Position.Y = 24.000000000000000000
+            Size.Width = 52.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            Tag = 3
+            OnClick = RectSinalClick
+            object LabSinal3: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Size.Width = 52.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 22.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = xFFF2C230
+              TextSettings.HorzAlign = Center
+              Text = #177
+              HitTest = False
+            end
+          end
+          object RectEdit3: TRectangle
+            Align = Client
+            Fill.Color = xFF222222
+            Margins.Top = 4.000000000000000000
+            Padding.Left = 12.000000000000000000
+            Padding.Right = 12.000000000000000000
+            Size.Width = 256.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 10.000000000000000000
+            YRadius = 10.000000000000000000
+            object EdtPontos3: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              StyleLookup = 'transparentedit'
+              TabOrder = 2
+              KeyboardType = NumbersAndPunctuation
+              FilterChar = '-0123456789'
+              MaxLength = 6
+              TextSettings.Font.Size = 22.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Size.Width = 232.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [Family]
+              TextPrompt = '0'
+            end
+          end
+        end
+        object LabDealerTitulo: TLabel
+          Align = Top
+          StyledSettings = [Family]
+          Margins.Top = 12.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 322.000000000000000000
+          Size.Width = 316.000000000000000000
+          Size.Height = 20.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 13.000000000000000000
+          TextSettings.FontColor = xFFA3A3A3
+          Text = 'Quem embaralhou nesta rodada'
+          HitTest = False
+        end
+        object RectDealer: TRectangle
+          Align = Top
+          Fill.Color = xFF222222
+          Margins.Top = 4.000000000000000000
+          Padding.Left = 12.000000000000000000
+          Padding.Right = 12.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 346.000000000000000000
+          Size.Width = 316.000000000000000000
+          Size.Height = 46.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 10.000000000000000000
+          YRadius = 10.000000000000000000
+          OnClick = RectDealerClick
+          object PathDealerSeta: TPath
+            Align = Right
+            Data.Data = 'M9 6 L15 12 L9 18'
+            Fill.Kind = None
+            HitTest = False
+            Margins.Top = 16.000000000000000000
+            Margins.Bottom = 16.000000000000000000
+            Position.X = 290.000000000000000000
+            Size.Width = 14.000000000000000000
+            Size.Height = 14.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = xFFF2C230
+            Stroke.Thickness = 2.000000000000000000
+            Stroke.Cap = Round
+            Stroke.Join = Round
+            WrapMode = Fit
+          end
+          object LabDealerNome: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Size.Width = 278.000000000000000000
+            Size.Height = 46.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.FontColor = claWhite
+            Text = 'Jogador'
+            HitTest = False
+          end
+        end
+        object RectBtnSalvar: TRectangle
+          Align = Top
+          Fill.Color = xFFF2C230
+          Margins.Top = 16.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 408.000000000000000000
+          Size.Width = 316.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 14.000000000000000000
+          YRadius = 14.000000000000000000
+          OnClick = RectBtnSalvarClick
+          object LabBtnSalvar: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Size.Width = 316.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = xFF111111
+            TextSettings.HorzAlign = Center
+            Text = 'Salvar rodada'
+            HitTest = False
+          end
+        end
+        object LayoutBotoesSec: TLayout
+          Align = Top
+          Margins.Top = 8.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 468.000000000000000000
+          Size.Width = 316.000000000000000000
+          Size.Height = 46.000000000000000000
+          Size.PlatformDefault = False
+          object RectBtnExcluir: TRectangle
+            Align = Right
+            Fill.Color = xFF2A1416
+            Margins.Left = 8.000000000000000000
+            Position.X = 186.000000000000000000
+            Size.Width = 130.000000000000000000
+            Size.Height = 46.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = xFFE5484D
+            XRadius = 14.000000000000000000
+            YRadius = 14.000000000000000000
+            OnClick = RectBtnExcluirClick
+            object LabBtnExcluir: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Size.Width = 130.000000000000000000
+              Size.Height = 46.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 15.000000000000000000
+              TextSettings.FontColor = xFFE5484D
+              TextSettings.HorzAlign = Center
+              Text = 'Excluir'
+              HitTest = False
+            end
+          end
+          object RectBtnCancelar: TRectangle
+            Align = Client
+            Fill.Color = xFF222222
+            Size.Width = 178.000000000000000000
+            Size.Height = 46.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 14.000000000000000000
+            YRadius = 14.000000000000000000
+            OnClick = RectBtnCancelarClick
+            object LabBtnCancelar: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Size.Width = 178.000000000000000000
+              Size.Height = 46.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 15.000000000000000000
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Cancelar'
+              HitTest = False
+            end
+          end
+        end
+      end
+    end
+    object LayoutCelebracao: TLayout
+      Align = Contents
+      Size.Width = 380.000000000000000000
+      Size.Height = 640.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+      object RectCelebFundo: TRectangle
+        Align = Contents
+        Fill.Color = xE6000000
+        Size.Width = 380.000000000000000000
+        Size.Height = 640.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        OnClick = RectBtnCelebClick
+      end
+      object LayoutCelebConteudo: TLayout
+        Align = Center
+        Size.Width = 320.000000000000000000
+        Size.Height = 470.000000000000000000
+        Size.PlatformDefault = False
+        object ImgCeleb: TImage
+          Align = Top
+          HitTest = False
+          Size.Width = 320.000000000000000000
+          Size.Height = 200.000000000000000000
+          Size.PlatformDefault = False
+          WrapMode = Fit
+        end
+        object LabCelebTitulo: TLabel
+          Align = Top
+          StyledSettings = [Family]
+          Margins.Top = 10.000000000000000000
+          Position.Y = 210.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 30.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = xFFF2C230
+          TextSettings.HorzAlign = Center
+          Text = 'Vit'#243'ria!'
+          HitTest = False
+        end
+        object LabCelebMsg: TLabel
+          Align = Top
+          StyledSettings = [Family]
+          Margins.Top = 4.000000000000000000
+          Position.Y = 258.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          TextSettings.WordWrap = True
+          Text = 'Mensagem'
+          HitTest = False
+        end
+        object LayoutCelebPerdedores: TLayout
+          Align = Top
+          Margins.Top = 8.000000000000000000
+          Position.Y = 326.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          object ImgDerrota: TImage
+            Align = Left
+            HitTest = False
+            Margins.Right = 8.000000000000000000
+            Size.Width = 44.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            WrapMode = Fit
+          end
+          object LabPerdedores: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Size.Width = 268.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 13.000000000000000000
+            TextSettings.FontColor = xFFA3A3A3
+            TextSettings.WordWrap = True
+            Text = 'N'#227'o foi dessa vez'
+            HitTest = False
+          end
+        end
+        object RectBtnCeleb: TRectangle
+          Align = Top
+          Fill.Color = xFFF2C230
+          Margins.Top = 16.000000000000000000
+          Position.Y = 394.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 52.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 14.000000000000000000
+          YRadius = 14.000000000000000000
+          OnClick = RectBtnCelebClick
+          object LabBtnCeleb: TLabel
+            Align = Client
+            StyledSettings = [Family]
+            Size.Width = 320.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = xFF111111
+            TextSettings.HorzAlign = Center
+            Text = 'Continuar'
+            HitTest = False
+          end
+        end
+      end
+    end
+  end
+  object TimerRelogio: TTimer
+    Enabled = False
+    OnTimer = TimerRelogioTimer
+    Left = 328
+    Top = 584
+  end
+end

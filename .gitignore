@@ -16,4 +16,7 @@ win64/Debug/vendaambulante_fmx.exe
 Android/
 Android64/
 __history/
-__recovery/
+__recovery/*.identcache
+*.dproj.local
+*.deployproj
+_antigo/
