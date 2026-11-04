@@ -1181,7 +1181,7 @@ begin
           if _property.PropertyType.QualifiedName = 'System.SysUtils.TTimeStamp' then
           begin
             ts := _property.GetValue(AObject).AsType<System.SysUtils.TTimeStamp>;
-            JSONObject.AddPair(f, TJSONNumber.Create(TimeStampToMsecs(ts)));
+            JSONObject.AddPair(f, TJSONNumber.Create(Trunc(TimeStampToMsecs(ts))));
           end;
         end;
       tkClass:

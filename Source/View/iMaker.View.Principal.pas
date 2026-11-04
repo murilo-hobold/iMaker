@@ -94,6 +94,7 @@ begin
   AplicarConfig;
 
   TNavegacao.OnNavegou := AoNavegar;
+  TNavegacao.Container := LayoutTela;
   RegistrarRotas;
   TRouter4D.Render<TFormJogo>.SetElement(LayoutTela, LayoutTela);
   AtualizarAbas(rtJogo);
